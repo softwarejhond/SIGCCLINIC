@@ -10,7 +10,7 @@ session_start();?>
 $filtro = htmlspecialchars($_SESSION["username"]);
 $query = mysqli_query($con,"SELECT nombre FROM users WHERE username like '%$filtro%'");
 while ($userLog = mysqli_fetch_array($query)) {
- $pacient=$userLog['nombre'];
+ $pacient=$userLog[nombre];
  }
 $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padrinoEducativo like '%$filtro%' AND estadoIES='ACTIVO CON MATERIAS CANCELADAS'");
 ?>
