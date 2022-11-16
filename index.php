@@ -106,6 +106,9 @@ include 'head.php';
             <div id="signin">
                 <div class="logo">
                     <img src="images/logoo.png" alt="logo" width="130px" style='text-aling:center;'>
+                    <br>
+                    <h1>Bienvenido</h1>
+                    <h2>Inicio de sesión</h2>
                 </div>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div>
