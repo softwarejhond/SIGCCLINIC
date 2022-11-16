@@ -119,7 +119,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                     <label style="color:#fff">Usuario</label>
-                    <input type="number" name="username" class="form-control text-center" placeholder="1234567890" value="<?php echo $username; ?>">
+                    <input type="number" name="username" class="form-control text-center" placeholder="1234567890"
+                        value="<?php echo $username; ?>">
                     <span class="help-block"><?php echo $username_err; ?></span>
                 </div>
                 <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
@@ -141,26 +142,43 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
 </body>
 <style>
+body {
+    background-size: cover;
+}
 
-body{background-size:cover;}
-.content {width:200px; margin:auto; border-radius:20px;height:400px;background:#333}
-.content p{color:white;font-size:20px;padding:40px;margin:auto;text-align:center;}
-.imageCycle1{
-    background:url(images/fond.png);
-    background-repeat:no-repeat;
-    background-size:cover;
+.content {
+    width: 200px;
+    margin: auto;
+    border-radius: 20px;
+    height: 400px;
+    background: #333
+}
+
+.content p {
+    color: white;
+    font-size: 20px;
+    padding: 40px;
+    margin: auto;
+    text-align: center;
+}
+
+.imageCycle1 {
+    background: url(images/fond.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-background-size: cover;
-    -moz-background-size:cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale');
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale')";
 }
-.imageCycle2{
-    background:url(images/back.png);
-    background-repeat:no-repeat;
-    background-size:cover;
+
+.imageCycle2 {
+    background: url(images/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-background-size: cover;
-    -moz-background-size:cover;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale');
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale')";
 }
 
@@ -186,7 +204,7 @@ body{background-size:cover;}
     background-image: url(images/fondo.png);
     box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
     background-size: cover;
-	border-radius: 40px;
+    border-radius: 40px;
 
 }
 
@@ -201,7 +219,7 @@ body{background-size:cover;}
     left: 0;
     background-image: radial-gradient(ellipse at left bottom, rgba(1, 184, 253) 0%, rgba(38, 20, 72, .9) 59%, rgba(1, 184, 253) 100%);
     box-shadow: 0 -20px 150px -20px rgba(0, 0, 0, 0.5);
-	border-radius: 40px;
+    border-radius: 40px;
 }
 
 .form-login {
@@ -352,13 +370,13 @@ body{background-size:cover;}
 }
 </style>
 <script>
-	//funcion para imagenes aleatorias
-$(document).ready(function(){
-    var classCycle=['imageCycle1','imageCycle2'];
+//funcion para imagenes aleatorias
+$(document).ready(function() {
+    var classCycle = ['imageCycle1', 'imageCycle2'];
 
     var randomNumber = Math.floor(Math.random() * classCycle.length);
     var classToAdd = classCycle[randomNumber];
-    
+
     $('body').addClass(classToAdd);
 
 });
