@@ -27,7 +27,7 @@
     width: 100%;
     /*margin:auto;*/
     background-image:url(images/footer.png);
-    color: #FF3B3E;
+    color: #000;
 }
 
 .widget {
