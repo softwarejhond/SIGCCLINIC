@@ -1,5 +1,5 @@
 <div class="card text-center">
- <div class="card-header minibar">
+ <div class="card-header" style="background-image:url(images/footer.png);">
         <i class="fa fa-feather-alt"></i> LISTA DE EVOLUCIONES CLÍNICAS <i class="fa fa-feather-alt"></i>
     </div>
     <div class="card-body">
