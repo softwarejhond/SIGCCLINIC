@@ -195,11 +195,11 @@ h6 {
 #signin {
     display: flex;
     flex-direction: column;
+    flex: 1;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    padding-bottom: 1rem;
     background-color: rgba(0, 197, 255, 0.7);
 }
 
