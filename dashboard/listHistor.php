@@ -1,5 +1,5 @@
 <div class="card text-center">
-    <div class="card-header "style="background-color:#01A7F0">
+    <div class="card-header " style="background-image:url(images/footer.png); color:#fff">
         <i class="fa fa-laptop-medical"></i> LISTA DE HISTORIAS CLÍNICAS <i class="fa fa-laptop-medical"></i>
     </div>
     <div class="card-body">
@@ -69,7 +69,7 @@ if (mysqli_num_rows($sql) == 0) {
             </tfoot>
         </table>
     </div>
-    <div class="card-footer "style="background-color:#01A7F0">
+    <div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
         <i class="fas fa-clock"></i>
         <?php
                                         $DateAndTime = date('m-d-Y h:i:s a', time());
