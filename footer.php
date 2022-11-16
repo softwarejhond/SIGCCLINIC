@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start text-light" style="color: #ffffff; background: #009BFF;">
+<footer class="text-center text-lg-start text-light" style="color: #ffffff; background-img:url(images/footer.png);">
     <!-- Copyright -->
     <div class="text-center p-3" >
         SISTEMA INTEGRAL DE GESTIÓN CLÍNICA <br>
@@ -8,9 +8,9 @@
                               
                               $queryCompany = mysqli_query($con,"SELECT nombre,nit FROM company");
                               while ($empresaLog = mysqli_fetch_array($queryCompany)) {
-                               echo '<label  class="card-text">'.$empresaLog[nombre].'</label>';
+                               echo '<label  class="card-text">'.$empresaLog['nombre'].'</label>';
                                echo '<br>';
-                               echo '<label  class="card-text">NIT: '.$empresaLog[nit].'</label>';
+                               echo '<label  class="card-text">NIT: '.$empresaLog['nit'].'</label>';
                                }
                                ?>
         <br>
