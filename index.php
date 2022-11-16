@@ -127,8 +127,9 @@ include 'head.php';
                 </div>
             </div>
             <footer id="main-footer">
-                <p>Copyright &copy; 2018, Sluralpright All Rights Reserved</p>
-
+            <p class="text-center login__forgot">SIGC &copy; Copyright <?php echo date("Y");?></p>
+        <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">Made by Agencia de Desarrollo
+            Eagle Software</a>
             </footer>
         </div>
         <div id="right">
