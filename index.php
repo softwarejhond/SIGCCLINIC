@@ -178,7 +178,6 @@ h6 {
     height: 100vh;
     background-color: rgba(0, 197, 255, 0.9);
 }
-
 #right {
     flex: 1;
 }
