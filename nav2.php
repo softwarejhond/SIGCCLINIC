@@ -173,7 +173,7 @@
 }
 
 .sidebar i {
-    color: #000;
+    color: #FCFCFF;
     height: 60px;
     min-width: 50px;
     font-size: 28px;
