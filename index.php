@@ -119,7 +119,7 @@ include 'head.php';
                             <div class="input-group-prepend">
                                 <div class="input-group-text" id="viewPassword"><i class="fa fa-eye"></i></div>
                             </div>
-                            <input type="text" name="password" class="text-input text-center form-control-lg" id="inlineFormInputGroupUsername2"
+                            <input type="password" name="password" class="text-input text-center form-control-lg" id="inlineFormInputGroupUsername2"
                                 placeholder="Contraseña">
                         </div>
                         <a id="viewPassword">Mostrar contraseña</a>
