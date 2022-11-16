@@ -22,7 +22,7 @@
     position: relative;
     max-width: 100%; /*change as per your design need */
     min-width: 100%;
-    background: var(--calendar-bg-color);
+    background-image:url(images/footer.png);
     color: var(--calendar-font-color);
     margin: 5px auto;
     box-sizing: border-box;
