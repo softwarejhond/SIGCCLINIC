@@ -223,7 +223,7 @@
 
 .sidebar input {
     font-size: 15px;
-    color: #FFF;
+    color: #FCFCFF;
     font-weight: 400;
     outline: none;
     height: 50px;
