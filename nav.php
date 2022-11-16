@@ -17,7 +17,7 @@ session_start();
 // Include config file
   include "conexion.php";
   ?>
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-image:linear-gradient(rgba(2, 52, 81, 0.8), rgba(8, 160, 206,0.8)), url(images/fondo2.png);">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-image:linear-gradient(rgba(2, 52, 81, 0.8), rgba(227, 141, 221,0.8)), url(images/fondo2.png);">
     <a class="navbar-brand" href="main.php"><img src="images/logoo.png" width="50px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
