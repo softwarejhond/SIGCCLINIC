@@ -268,7 +268,7 @@
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
-    background:#68A4FF;
+    background:#FFC800;
 }
 
 .sidebar li a:hover {
