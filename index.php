@@ -192,7 +192,7 @@ h6 {
 }
 
 /* Sign In */
-#signin {
+#left {
     display: flex;
     flex-direction: column;
     flex: 1;
