@@ -115,6 +115,9 @@ include 'head.php';
                     <div>
                         <label>Contraseña</label>
                         <input type="password" name="password" id="password" placeholder="*******" class="text-input text-center form-control-lg" />
+                        <div class="input-group-prepend">
+      <div class="input-group-text">@</div>
+    </div>
                         <a id="viewPassword">Mostrar contraseña</a>
                     </div>
                     <button type="submit" class="primary-btn"><b>Iniciar sesión</b></button>
