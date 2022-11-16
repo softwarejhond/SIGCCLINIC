@@ -30,13 +30,10 @@ include 'head.php';
             <span>OR</span>
             <hr class="bar" />
           </div>
-          <a href="#" class="secondary-btn">Create an account</a>
-        </div>
+         </div>
         <footer id="main-footer">
           <p>Copyright &copy; 2018, Sluralpright All Rights Reserved</p>
-          <div>
-            <a href="#">terms of use</a> | <a href="#">Privacy Policy</a>
-          </div>
+       
         </footer>
       </div>
       <div id="right">
