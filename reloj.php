@@ -26,7 +26,6 @@
 .wrap {
     width: 100%;
     /*margin:auto;*/
-    background-image:url(images/footer.png);
     color: #000;
 }
 
