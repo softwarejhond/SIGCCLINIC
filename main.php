@@ -31,7 +31,7 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
 <?php include 'nav2.php';?>
 
 <body>
-    <section class="home-section">
+    <section class="home-section mr-3">
         <?php include 'nav.php';?>
         <h4 id="datos"></h4>
         <div class="container-fluid rounded">
@@ -46,6 +46,7 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
                         <?php include './dashboard/alertHistoryDelete.php';?>
                         <?php include './dashboard/alertPatientDelete.php';?>
                         </br>
+
                         <?php //muy importante
                          include "contadores/contadores.php";?>
                         </br>
