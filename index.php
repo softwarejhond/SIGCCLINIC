@@ -131,16 +131,7 @@ include 'head.php';
             Eagle Software</a>
             </footer>
         </div>
-        <div id="right">
-            <div id="showcase">
-                <div class="showcase-content">
-                    <h1 class="showcase-text">
-                        Let's create the future <strong>together</strong>
-                    </h1>
-                    <a href="#" class="secondary-btn">Start a FREE 10-day trial</a>
-                </div>
-            </div>
-        </div>
+      
     </div>
 </body>
 <style>
