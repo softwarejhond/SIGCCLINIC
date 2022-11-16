@@ -141,7 +141,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </button>
                     </div>
                     <div class="toast-body alert-success">
-                        <h5> <b>Doctor Registrado Correctamente</b></h5>
+                        <h5> <b>Usuario Registrado Correctamente</b></h5>
                    
                     </div>
                 </div>
@@ -217,8 +217,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                             <select class="form-control" name="dependencia" required="true">
                                                 <option value="">Dependencia</option>
                                                 <option value="Ingeniero">Ingeniero</option>
-                                                <option value="Especialista">Especialista</option>
-                                                <option value="Recepcion">Recepción</option>
+                                                <option value="Presidente">Presidente</option>
+                                                <option value="Auxiliar">Auxiliar</option>
                                             </select>
                                         </div>
                                         <div class="form-group ">

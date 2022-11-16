@@ -104,67 +104,66 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 
 <body>
+	
     <div class="login-container container">
         <div class="form-login">
-            <ul class="login-nav text-center">
+            <ul class="login-nav">
                 <li class="login-nav__item active">
                     <a href="index.php">Iniciar sesión</a>
                 </li>
+                <li class="login-nav__item">
+                    <a href="register_student.php">Registrarme</a>
+                </li>
             </ul>
             <div style="text-align:center;">
-                <img src="images/logoo.png" alt="logo" width="150px" style='text-aling:center;'>
+                <img src="images/logoo.png" alt="logo" width="150px" style="text-aling:center;">
 
             </div>
             <br>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                 <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                     <label style="color:#fff">Usuario</label>
-                    <input type="number" name="username" class="form-control text-center" placeholder="1234567890" value="<?php echo $username; ?>">
+                    <input type="number" name="username" class="form-control" placeholder="Usuario"
+                        value="<?php echo $username; ?>">
                     <span class="help-block"><?php echo $username_err; ?></span>
                 </div>
-                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
+                <div class="form-group campo <?php echo (!empty($password_err)) ? 'has-error' : ''; ?> flex-nowrap">
                     <label style="color:#fff">Contraseña</label>
-                    <input type="password" name="password" placeholder="*******" class="form-control text-center">
+                    <input type="password" name="password" class="form-control" placeholder="Contraseña" id="password">
                     <span class="help-block"><?php echo $password_err; ?></span>
                 </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-success w-100" value="Ingresar">
+
+                <div class="form-group text-center">
+                    <input type="submit" class="btn btn-success" value="Ingresar">
                 </div>
             </form>
+            <div class="container">
+                <div class="title">SIGC</div>
+            </div>
         </div>
-        <br>
-        <p class="text-center login__forgot">SIGC &copy; Copyright <?php echo date("Y");?></p>
-        <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">Made by Agencia de Desarrollo
+
+        <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">SIGC &copy; Copyright
+            <?php echo date("Y");?> <br>Made by Agencia de Desarrollo
             Eagle Software</a>
-        <br>
-        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" class="login__forgot"><img
+                alt="Licencia Creative Commons" style="border-width:0"
+                src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /> <a rel="license"
+            href="http://creativecommons.org/licenses/by-nc-nd/4.0/" style="color:#ffffff" class="login__forgot">Esta
+            obra está bajo una Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional</a>.
+
     </div>
+
 </body>
 <style>
-
-body{background-size:cover;}
-.content {width:200px; margin:auto; border-radius:20px;height:400px;background:#333}
-.content p{color:white;font-size:20px;padding:40px;margin:auto;text-align:center;}
-.imageCycle1{
-    background:url(images/fond.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-    -webkit-background-size: cover;
-    -moz-background-size:cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale')";
+body {
+    background-image: url("/images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 1px;
 }
-.imageCycle2{
-    background:url(images/back.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-    -webkit-background-size: cover;
-    -moz-background-size:cover;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale')";
-}
-
-
 
 * {
     box-sizing: border-box;
@@ -183,10 +182,10 @@ body{background-size:cover;}
     padding: 5rem 4rem 0 4rem;
     width: 100%;
     max-width: 525px;
-    background-image: url(images/fondo.png);
+    min-height: 680px;
+    background-image: url("/images/medellin.jpg");
     box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
     background-size: cover;
-	border-radius: 40px;
 
 }
 
@@ -201,7 +200,6 @@ body{background-size:cover;}
     left: 0;
     background-image: radial-gradient(ellipse at left bottom, rgba(1, 184, 253) 0%, rgba(38, 20, 72, .9) 59%, rgba(1, 184, 253) 100%);
     box-shadow: 0 -20px 150px -20px rgba(0, 0, 0, 0.5);
-	border-radius: 40px;
 }
 
 .form-login {
@@ -350,18 +348,64 @@ body{background-size:cover;}
     position: relative;
     z-index: 1;
 }
+
+.login__forgot:hover {
+    color: rgb(17, 97, 237);
+}
+
+/*---- ANIMACIÓN TEXTO------ */
+@mixin center() {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+
+
+.title {
+    font-weight: 800;
+    color: transparent;
+    font-size: 120px;
+    background: url("/images/medellin.jpg") repeat;
+    background-position: 40% 50%;
+    -webkit-background-clip: text;
+    position: relative;
+    text-align: center;
+    line-height: 90px;
+    letter-spacing: -8px;
+}
+
+.subtitle {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
 </style>
+
+<script src="js/login.js?v=0.0.0.4"></script>
 <script>
-	//funcion para imagenes aleatorias
-$(document).ready(function(){
-    var classCycle=['imageCycle1','imageCycle2'];
-
-    var randomNumber = Math.floor(Math.random() * classCycle.length);
-    var classToAdd = classCycle[randomNumber];
-    
-    $('body').addClass(classToAdd);
-
+$(document).ready(function() {
+    var mouseX, mouseY;
+    var ww = $(window).width();
+    var wh = $(window).height();
+    var traX, traY;
+    $(document).mousemove(function(e) {
+        mouseX = e.pageX;
+        mouseY = e.pageY;
+        traX = ((4 * mouseX) / 570) + 40;
+        traY = ((4 * mouseY) / 570) + 50;
+        console.log(traX);
+        $(".title").css({
+            "background-position": traX + "%" + traY + "%"
+        });
+    });
 });
 </script>
+
 
 </html>

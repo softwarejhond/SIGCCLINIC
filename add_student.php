@@ -1,21 +1,5 @@
 <?php
-// Initialize the session
-session_start();
-    // Establecer tiempo de vida de la sesión en segundos
-    $inactividad = 86400;
-    // Comprobar si $_SESSION["timeout"] está establecida
-    if(isset($_SESSION["timeout"])){
-        // Calcular el tiempo de vida de la sesión (TTL = Time To Live)
-        $sessionTTL = time() - $_SESSION["timeout"];
-        if($sessionTTL > $inactividad){
-            header("location: main.php");
-            exit;
-        }
-    }
-    // El siguiente key se crea cuando se inicia sesión
-    $_SESSION["timeout"] = time();
-// Include config file
-require_once "conexion.php";
+include "conexion.php";
 ?>
 
 <!DOCTYPE html>
@@ -309,7 +293,7 @@ require_once "conexion.php";
                         <textarea class="form-control" name="addActividad" required="true"></textarea>
                     </div>
                     <div class="modal-footer">
-                <input type="submit" name="addActivities" class="btn btn-outline-success" value="Registrar actividad"
+                <input type="submit" name="addActivities" class="btn btn-outline-success" value="Registrar estudiante"
                     require>
                 <input type="reset" class="btn btn-outline-danger" value="Cancelar">
                 </div>

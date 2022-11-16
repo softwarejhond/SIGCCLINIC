@@ -16,6 +16,7 @@
                     <th class="w-50">Doctor</th>
                     <th class="w-50"> </th>
                     <th class="w-50"> </th>
+           
                 </tr>
             </thead>
             <tbody>
@@ -69,7 +70,7 @@ if (mysqli_num_rows($sql) == 0) {
             </tfoot>
         </table>
     </div>
-    <div class="card-footer"style="background-color:#FFD500">
+    <div class="card-footer"style="background-color:#FFD333">
         <i class="fas fa-clock"></i>
         <?php
                                         $DateAndTime = date('m-d-Y h:i:s a', time());

@@ -29,25 +29,25 @@
             </li>
             <li>
                 <a href="add_doc.php">
-                    <i class='fas fa-stethoscope'></i>
-                    <span class="links_name">Agregar Doctor</span>
+                    <i class='fas fa-user-shield'></i>
+                    <span class="links_name">Agregar usuario</span>
                 </a>
-                <span class="tooltip">Agregar Doctor</span>
+                <span class="tooltip">Agregar usuario</span>
             </li>
             <li>
                 <a href="add_paciente.php">
                     <i class='fas fa-users'></i>
-                    <span class="links_name">Crear Paciente</span>
+                    <span class="links_name">Crear estudiante</span>
                 </a>
-                <span class="tooltip">Crear Paciente</span>
+                <span class="tooltip">Crear estudiante</span>
             </li>
           
             <li>
                 <a href="#">
                     <i class='fas fa-file-excel'></i>
-                    <span class="links_name">Reporte de Usuarios</span>
+                    <span class="links_name">Reporte de estudiante</span>
                 </a>
-                <span class="tooltip">Reporte de Usuarios</span>
+                <span class="tooltip">Reporte de estudiante</span>
             </li>
             <li>
                 <a href="perfil.php">
@@ -79,17 +79,12 @@
     <script>
     let sidebar = document.querySelector(".sidebar");
     let closeBtn = document.querySelector("#btn");
-    let searchBtn = document.querySelector(".bx-search");
-
+ 
     closeBtn.addEventListener("click", () => {
         sidebar.classList.toggle("open");
         menuBtnChange(); //calling the function(optional)
     });
 
-    searchBtn.addEventListener("click", () => { // Sidebar open when you click on the search iocn
-        sidebar.classList.toggle("open");
-        menuBtnChange(); //calling the function(optional)
-    });
 
     // following are the code to change sidebar button(optional)
     function menuBtnChange() {
@@ -268,7 +263,7 @@
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
-    background:#E8452A;
+    background: #11101D;
 }
 
 .sidebar li a:hover {

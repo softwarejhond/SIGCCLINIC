@@ -107,11 +107,10 @@ require_once "conexion.php";
 				              $updAdress= mysqli_real_escape_string($con,(strip_tags($_POST["updAdress"],ENT_QUOTES)));//Escanpando caracteres 
 				              $updGenero= mysqli_real_escape_string($con,(strip_tags($_POST["updGenero"],ENT_QUOTES)));//Escanpando caracteres 
                               $updDepartmen= mysqli_real_escape_string($con,(strip_tags($_POST["updDepartmen"],ENT_QUOTES)));//Escanpando caracteres 
-				              $updProfesion= mysqli_real_escape_string($con,(strip_tags($_POST["updProfesion"],ENT_QUOTES)));//Escanpando caracteres 
 				              
                               $update = mysqli_query($con, "UPDATE users SET nombre='$updName',
                                telefono='$updPhone', email='$updEmail', edad='$updYear', direccion='$updAdress',
-                               genero='$updGenero', dependencia='$updDepartmen',profesion='$updProfesion' WHERE username like '%$usaurio%'");
+                               genero='$updGenero', dependencia='$updDepartmen' WHERE username like '%$usaurio%'");
                               if ($update) {
                                   echo '<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Los datos se han actualizado y guardados con éxito.</div>';
                           
@@ -188,7 +187,6 @@ require_once "conexion.php";
                                 $genero= $userLog['genero'];
                                 $department= $userLog['dependencia'];
                                 $direccion= $userLog['direccion'];
-                                $profesion= $userLog['profesion'];
                                 }
 
                         
@@ -239,11 +237,6 @@ require_once "conexion.php";
                                                         <option value="Especialista">Especialista</option>
                                                         <option value="Recepcion">Recepción</option>
                                                     </select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Nombre de su profesión</label>
-                                                    <input type="text" name="updProfesion" class="form-control"
-                                                        value="<?php echo $profesion; ?>" require>
                                                 </div>
                                                 <div class="form-group">
                                                     <input type="submit" class="btn btn-outline-success"

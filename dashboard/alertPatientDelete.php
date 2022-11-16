@@ -2,11 +2,11 @@
 if (isset($_GET['aksi']) == 'delete') {
     // escaping, additionally removing everything that could be (html/javascript-) code
     $nik = mysqli_real_escape_string($con, (strip_tags($_GET["nik"], ENT_QUOTES)));
-    $cek = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion='$nik'");
+    $cek = mysqli_query($con, "SELECT * FROM estudents WHERE numeroIdentificacion='$nik'");
     if (mysqli_num_rows($cek) == 0) {
         echo '<div class="alert alert-info alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> No se encontraron datos.</div>';
     } else {
-        $delete = mysqli_query($con, "DELETE FROM patient WHERE numeroIdentificacion='$nik'");
+        $delete = mysqli_query($con, "DELETE FROM estudents WHERE numeroIdentificacion='$nik'");
         if ($delete) {
             echo '
             <div class="toastPatient" style="position: absolute; top: 0; right: 0;" data-delay="4000">
@@ -20,7 +20,7 @@ if (isset($_GET['aksi']) == 'delete') {
                     </button>
                 </div>
                 <div class="toast-body alert-danger">
-                    <h5> <b>Paciente eliminado correctamente</b></h5>
+                    <h5> <b>Estudiante eliminado correctamente</b></h5>
                
                 </div>
             </div>
@@ -36,7 +36,7 @@ if (isset($_GET['aksi']) == 'delete') {
                 </button>
             </div>
             <div class="toast-body alert-danger">
-                <h5> <b>Hubo problemas al eliminar el paciente</b></h5>
+                <h5> <b>Hubo problemas al eliminar el estudiante</b></h5>
            
             </div>
         </div>

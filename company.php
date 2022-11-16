@@ -147,12 +147,12 @@ require_once "conexion.php";
                                $usaurio= htmlspecialchars($_SESSION["username"]);
                                $query = mysqli_query($con,"SELECT * FROM company WHERE id='1'");
                                while ($userLog = mysqli_fetch_array($query)) {
-                                $name= $userLog[nombre];
-                                $phone= $userLog[telefono];
-                                $email= $userLog[email];
-                                $direccion= $userLog[direccion];
-                                $nit= $userLog[nit];
-                                $city= $userLog[ciudad];
+                                $name= $userLog['nombre'];
+                                $phone= $userLog['telefono'];
+                                $email= $userLog['email'];
+                                $direccion= $userLog['direccion'];
+                                $nit= $userLog['nit'];
+                                $city= $userLog['ciudad'];
                                 }
                                 ?>
                                             <form action="" method="POST" class="was-validated">
