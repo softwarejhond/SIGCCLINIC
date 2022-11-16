@@ -98,11 +98,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <?php
 include 'head.php';
-
 ?>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <body>
     <div id="wrapper">
         <div id="left">
@@ -117,10 +114,8 @@ include 'head.php';
                     </div>
                     <div>
                         <label>Contraseña</label>
-                        <input type="password" name="password" placeholder="*******" class="text-input text-center form-control-lg" />
-                        <div class="input-group-append">
-            <button id="show_password" class="btn btn-primary" type="button" onclick="mostrarPassword()"> <span class="fa fa-eye-slash icon"></span> </button>
-          </div>
+                        <input type="password" name="password" id="password" placeholder="*******" class="text-input text-center form-control-lg" />
+                        <span>Mostrar</span>
                     </div>
                     <button type="submit" class="primary-btn"><b>Iniciar sesión</b></button>
                 </form>
@@ -398,23 +393,18 @@ $(document).ready(function(){
 
 });
 </script>
-<script type="text/javascript">
-function mostrarPassword(){
-		var cambio = document.getElementById("txtPassword");
-		if(cambio.type == "password"){
-			cambio.type = "text";
-			$('.icon').removeClass('fa fa-eye-slash').addClass('fa fa-eye');
-		}else{
-			cambio.type = "password";
-			$('.icon').removeClass('fa fa-eye').addClass('fa fa-eye-slash');
-		}
-	} 
-	
-	$(document).ready(function () {
-	//CheckBox mostrar contraseña
-	$('#ShowPassword').click(function () {
-		$('#Password').attr('type', $(this).is(':checked') ? 'text' : 'password');
-	});
+<script>
+    document.querySelector('.signin span').addEventListener('click', e => {
+    const passwordInput = document.querySelector('#password');
+    if (e.target.classList.contains('show')) {
+        e.target.classList.remove('show');
+        e.target.textContent = 'Ocultar';
+        passwordInput.type = 'text';
+    } else {
+        e.target.classList.add('show');
+        e.target.textContent = 'Mostrar';
+        passwordInput.type = 'password';
+    }
 });
 </script>
 </html>
