@@ -47,6 +47,10 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
                         <?php include './dashboard/alertPatientDelete.php';?>                       
                         
                         <br>
+                        <?php //muy importante
+                         include "contadores/contadores.php";
+                        ?>
+                        <br>
                         <div class="container">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
