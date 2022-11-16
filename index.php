@@ -36,9 +36,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $password_err = "Por favor ingrese su contraseña.";
     } else{
         $password = trim($_POST["password"]);
-    }
-    
-    // Validate credentials
+    }?>
+<!DOCTYPE html>
+<html lang="en">
+<?php
+include 'head.php';
+?>
+
+<body>
+    <div id="wrapper">
+        <div id="left">
+            <?php
+                // Validate credentials
     if(empty($username_err) && empty($password_err)){
         // Prepare a select statement
         $sql = "SELECT id, username, password FROM users WHERE username = ?";
@@ -93,22 +102,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     mysqli_close($con);
 }
-?>
-<!DOCTYPE html>
-<html lang="en">
-<?php
-include 'head.php';
-?>
-
-<body>
-    <div id="wrapper">
-        <div id="left">
+            ?>
             <div id="signin">
                 <div class="logo">
                     <img src="images/logoo.png" alt="logo" width="130px" style='text-aling:center;'>
-                    <br>
-                    <h1>Bienvenido</h1>
-                    <h2>Inicio de sesión</h2>
                 </div>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div>
