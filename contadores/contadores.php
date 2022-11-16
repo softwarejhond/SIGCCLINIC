@@ -33,3 +33,8 @@ $numero = mysqli_num_rows($sql);
         </div>
     </div>
 </div>
+<style>
+  .card{
+    background-image: url(images/efectocard.png);
+  }
+</style>
