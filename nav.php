@@ -17,7 +17,7 @@ session_start();
 // Include config file
   include "conexion.php";
   ?>
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top nav">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top navegador">
     <a class="navbar-brand" href="main.php"><img src="images/logoo.png" width="50px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@ session_start();
     </div>
 </nav>
 <style>
-    .nav {
+    .navegador {
     color: #fff;
     background-image:url(images/footer.png);
   
