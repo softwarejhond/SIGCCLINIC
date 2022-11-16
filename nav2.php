@@ -120,7 +120,7 @@
     top: 0;
     height: 100%;
     width: 78px;
-    background-image:linear-gradient(rgba(4, 152, 148,1), rgba(226, 99, 52,1)), url(images/fondo2.png); 
+    background-image:linear-gradient(rgba(4, 152, 148,0.7), rgba(226, 99, 52,0.7)), url(images/fondo2.png); 
     padding: 6px 14px;
     z-index: 99;
     transition: all 0.5s ease;
