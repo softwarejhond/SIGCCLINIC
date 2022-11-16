@@ -118,9 +118,10 @@ include 'head.php';
                         <label>Contraseña:</label>
                             <div class="input-group-prepend">
                                 <div class="input-group-text" id="viewPassword"><i class="fa fa-eye"></i></div>
-                            </div>
+                           
                             <input type="password" name="password" class="text-input text-center form-control-lg" id="password"
                                 placeholder="Contraseña">
+                                </div>
                         </div>
                     </div>
                     <button type="submit" class="primary-btn"><b>Iniciar sesión</b></button>
