@@ -119,10 +119,9 @@ include 'head.php';
                             <div class="input-group-prepend">
                                 <div class="input-group-text" id="viewPassword"><i class="fa fa-eye"></i></div>
                             </div>
-                            <input type="password" name="password" class="text-input text-center form-control-lg" id="password"
+                            <input type="password" name="password" class="text-center form-control-lg" id="password"
                                 placeholder="Contraseña">
                         </div>
-                        <a id="viewPassword">Mostrar contraseña</a>
                     </div>
                     <button type="submit" class="primary-btn"><b>Iniciar sesión</b></button>
                 </form>
@@ -405,6 +404,7 @@ $(document).ready(function() {
 });
 </script>
 <script>
+    //view pass
 let password = document.getElementById('password');
 let viewPassword = document.getElementById('viewPassword');
 let click = false;
