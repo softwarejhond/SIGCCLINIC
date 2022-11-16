@@ -1,5 +1,5 @@
 <div class="card text-center">
- <div class="card-header" style="background-image:url(images/footer.png);">
+ <div class="card-header" style="background-image:url(images/footer.png); color:#fff">
         <i class="fa fa-feather-alt"></i> LISTA DE EVOLUCIONES CLÍNICAS <i class="fa fa-feather-alt"></i>
     </div>
     <div class="card-body">
@@ -69,8 +69,7 @@ if (mysqli_num_rows($sql) == 0) {
             </tfoot>
         </table>
     </div>
-    <div class="card-footer minibar">
-    <div class="card-footer" >
+    <div class="card-footer"style="background-color:#01A7F0">
         <i class="fas fa-clock"></i>
         <?php
                                         $DateAndTime = date('m-d-Y h:i:s a', time());
@@ -83,9 +82,3 @@ if (mysqli_num_rows($sql) == 0) {
             $(".toastEvolutions").toast('show');
         });
 </script>
-<style>
-    .minibar{
-        background-image:url(images/footer.png);
-        color: #fff;
-    }
-</style>
