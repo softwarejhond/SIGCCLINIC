@@ -34,7 +34,6 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
     <section class="home-section">
         <?php include 'nav.php';?>
         <h4 id="datos"></h4>
-        <div class="container-fluid rounded">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 px-2 mt-1">
                     <div class="card">
@@ -84,7 +83,6 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
                     </div>
                 </div>
             </div>
-        </div>
         <?php include 'footer.php';?>
     </section>
     <!-- MENSAJE DE BIENVENIDA TOAST-->
