@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start text-light" style="color: #ffffff; background-img:url(images/footer.png);">
+<footer class="text-center text-lg-start text-light footer">
     <!-- Copyright -->
     <div class="text-center p-3" >
         SISTEMA INTEGRAL DE GESTIÓN CLÍNICA <br>
@@ -22,5 +22,11 @@
 <!-- Footer -->
 </footer>
 </nav>
-
+<style>
+    .footer {
+    color: #fff;
+    background-image:url(images/footer.png);
+  
+}
+</style>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
