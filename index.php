@@ -199,6 +199,7 @@ h6 {
     align-items: center;
     width: 80%;
     padding-bottom: 1rem;
+    background-color: rgba(0, 197, 255, 0.7);
 }
 
 #signin form {
