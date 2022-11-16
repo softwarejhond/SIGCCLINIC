@@ -185,19 +185,7 @@ h6 {
     box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
     background-size: cover;
 }
-#left:after{
-    content: '';
-    display: inline-block;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: radial-gradient(ellipse at left bottom, rgba(1, 184, 253) 0%, rgba(38, 20, 72, .9) 59%, rgba(1, 184, 253) 100%);
-    box-shadow: 0 -20px 150px -20px rgba(0, 0, 0, 0.5);
-	border-radius: 40px;
-}
+
 
 #right {
     flex: 1;
