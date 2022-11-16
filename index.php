@@ -109,7 +109,7 @@ include 'head.php';
                 </div>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div>
-                        <label style="color:#000000">Usuario ID:</label>
+                        <label style="color:#fff">Usuario ID:</label>
                         <div class="input-group-prepend">
                                 <div class="input-group-text form-control-lg"><i class="fa fa-user" style="cursor:pointer ;"></i></div>
                            
@@ -118,7 +118,7 @@ include 'head.php';
                         </div>
                     </div>
                     <div>
-                    <label style="color:#000000">Contraseña:</label>
+                    <label style="color:#fff">Contraseña:</label>
                             <div class="input-group-prepend">
                                 <div class="input-group-text form-control-lg" id="viewPassword"><i class="fa fa-eye" style="cursor:pointer ;"></i></div>
                            
@@ -259,7 +259,7 @@ h6 {
 
 
 #signin .or span {
-    color: #000000;
+    color: #fff;
     padding: 0 0.8rem;
 }
 
@@ -307,7 +307,7 @@ h6 {
 
 /* Footer */
 #main-footer {
-    color: #000000;
+    color: #fff;
     text-align: center;
     font-size: 0.8rem;
     max-width: 80%;
@@ -315,7 +315,7 @@ h6 {
 }
 
 #main-footer a {
-    color: #000000;
+    color: #fff;
     text-decoration: underline;
 }
 
