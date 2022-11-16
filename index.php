@@ -121,7 +121,7 @@ include 'head.php';
 
                 <div class="or">
                     <hr class="bar" />
-                    <span>OR</span>
+                    <span><b>TODOS LOS DERECHOS RESERVADOS PARA FUNDACIÓN CERI</b></span>
                     <hr class="bar" />
                 </div>
             </div>
