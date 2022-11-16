@@ -276,7 +276,7 @@
 }
 
 .sidebar li a .links_name {
-    color: #FCFCFF; 
+    color: #000; 
     font-size: 15px;
     font-weight: 400;
     white-space: nowrap;
