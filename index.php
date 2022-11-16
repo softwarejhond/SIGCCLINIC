@@ -179,7 +179,7 @@ h6 {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: rgb(157,148,205,0.8);
+    background-color: rgba(0, 197, 255, 0.8);
 }
 
 #right {
@@ -314,7 +314,7 @@ h6 {
 }
 
 #main-footer a {
-    color: #FF707D;
+    color: #68A4FF;
     text-decoration: underline;
 }
 
@@ -326,7 +326,7 @@ h6 {
     border: 0;
     border-radius: 2px;
     font-weight: 500;
-    background: #FF707D;
+    background: #68A4FF;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -335,7 +335,7 @@ h6 {
 }
 
 .primary-btn:hover {
-    background-color: #FF707D;
+    background-color: #68A4FF;
 }
 
 .secondary-btn {
@@ -354,8 +354,8 @@ h6 {
 }
 
 .secondary-btn:hover {
-    border-color: #FF707D;
-    color: #FF707D;
+    border-color: #ff7b39;
+    color: #ff7b39;
 }
 
 /* Media Queries */
