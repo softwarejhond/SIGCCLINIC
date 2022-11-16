@@ -12,10 +12,10 @@ include 'head.php';
             <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
                 <div class="container-fluid">
                     <div class="row">
+                        <form control="" class="form-group">
                         <div class="row">
                         <h2>Iniciar sesión</h2> 
                     </div>
-                        <form control="" class="form-group">
                             <div class="row">
                                 <input type="text" name="username" id="username" class="form__input"
                                     placeholder="Username">
