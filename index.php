@@ -115,7 +115,7 @@ include 'head.php';
                     </div>
                     <div>
                     <label>Contraseña:</label>
-                        <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group">
                      
                             <div class="input-group-prepend">
                                 <div class="input-group-text form-control-lg" id="viewPassword"><i class="fa fa-eye"></i></div>
