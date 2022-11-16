@@ -310,7 +310,7 @@
     left: 0;
     bottom: -8px;
     padding: 10px 14px;
-    background: #1d1b31;
+    background-image:url(images/footer.png);
     transition: all 0.5s ease;
     overflow: hidden;
 }
