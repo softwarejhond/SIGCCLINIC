@@ -8,8 +8,8 @@ include 'head.php';
       <div id="left">
         <div id="signin">
           <div class="logo">
-            <img src="https://image.ibb.co/hW1YHq/login-logo.png" alt="Sluralpright" />
-          </div>
+          <img src="images/logoo.png" alt="logo" width="150px" style='text-aling:center;'>
+ </div>
           <form>
             <div>
               <label>Email or username</label>
