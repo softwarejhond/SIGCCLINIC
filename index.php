@@ -421,6 +421,14 @@ viewPassword.addEventListener('click', (e) => {
         click = false
     }
 })
+
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-196506186-1');
 </script>
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/21270650.js"></script>
