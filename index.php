@@ -303,7 +303,7 @@ h6 {
 
 /* Footer */
 #main-footer {
-    color: #F9DA5A;
+    color: #000000;
     text-align: center;
     font-size: 0.8rem;
     max-width: 80%;
