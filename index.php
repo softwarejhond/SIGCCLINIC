@@ -271,7 +271,7 @@ h6 {
 }
 
 .imageCycle1 {
-    background: url(images/fond.png);
+    background: url(images/fondo1.png);
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
@@ -281,7 +281,7 @@ h6 {
 }
 
 .imageCycle2 {
-    background: url(images/back.png);
+    background: url(images/fondo2.png);
     background-repeat: no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
