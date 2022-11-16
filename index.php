@@ -110,31 +110,34 @@ include 'head.php';
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div>
                         <label>Usuario ID </label>
-                        <input type="number" name="username" placeholder="1234567890" class="text-input text-center form-control-lg" />
+                        <input type="number" name="username" placeholder="1234567890"
+                            class="text-input text-center form-control-lg" />
                     </div>
                     <div>
-                    <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
-  <div class="input-group mb-2 mr-sm-2">
-    <div class="input-group-prepend">
-      <div class="input-group-text">@</div>
-    </div>
-    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
-  </div>
+                        <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+                        <div class="input-group mb-2 mr-sm-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text" id="viewPassword"><i class="fa fa-eye"></i></div>
+                            </div>
+                            <input type="text" name="password" class="text-input text-center form-control-lg" id="inlineFormInputGroupUsername2"
+                                placeholder="Contraseña">
+                        </div>
                         <a id="viewPassword">Mostrar contraseña</a>
                     </div>
                     <button type="submit" class="primary-btn"><b>Iniciar sesión</b></button>
                 </form>
             </div>
             <footer id="main-footer">
-            <p class="text-center login__forgot">SIGC &copy; Copyright <?php echo date("Y");?></p>
-         <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">Made by Agencia de Desarrollo
-            Eagle Software</a>
+                <p class="text-center login__forgot">SIGC &copy; Copyright <?php echo date("Y");?></p>
+                <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">Made by Agencia de
+                    Desarrollo
+                    Eagle Software</a>
             </footer>
         </div>
         <div id="right">
             <div id="showcase">
                 <div class="showcase-content">
-               
+
                 </div>
             </div>
         </div>
@@ -178,6 +181,7 @@ h6 {
     height: 100vh;
     background-color: rgba(0, 197, 255, 0.9);
 }
+
 #right {
     flex: 1;
 }
@@ -259,25 +263,27 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-   height: 100vh;
+    height: 100vh;
     text-align: center;
 }
-.imageCycle1{
-    background:url(images/fond.png);
-    background-repeat:no-repeat;
-    background-size:cover;
+
+.imageCycle1 {
+    background: url(images/fond.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-background-size: cover;
-    -moz-background-size:cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale');
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale')";
 }
-.imageCycle2{
-    background:url(images/back.png);
-    background-repeat:no-repeat;
-    background-size:cover;
+
+.imageCycle2 {
+    background: url(images/back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-background-size: cover;
-    -moz-background-size:cover;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale');
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale')";
 }
 
@@ -387,13 +393,13 @@ h6 {
 }
 </style>
 <script>
-	//funcion para imagenes aleatorias
-$(document).ready(function(){
-    var classCycle=['imageCycle1','imageCycle2'];
+//funcion para imagenes aleatorias
+$(document).ready(function() {
+    var classCycle = ['imageCycle1', 'imageCycle2'];
 
     var randomNumber = Math.floor(Math.random() * classCycle.length);
     var classToAdd = classCycle[randomNumber];
-    
+
     $('body').addClass(classToAdd);
 
 });
@@ -403,14 +409,15 @@ let password = document.getElementById('password');
 let viewPassword = document.getElementById('viewPassword');
 let click = false;
 
-viewPassword.addEventListener('click', (e)=>{
-  if(!click){
-    password.type = 'text'
-    click = true
-  }else if(click){
-    password.type = 'password'
-    click = false
-  }
+viewPassword.addEventListener('click', (e) => {
+    if (!click) {
+        password.type = 'text'
+        click = true
+    } else if (click) {
+        password.type = 'password'
+        click = false
+    }
 })
 </script>
+
 </html>
