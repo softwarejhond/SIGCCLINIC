@@ -404,7 +404,7 @@ $(document).ready(function(){
     var randomNumber = Math.floor(Math.random() * classCycle.length);
     var classToAdd = classCycle[randomNumber];
     
-    $('right').addClass(classToAdd);
+    $('body').addClass(classToAdd);
 
 });
 </script>
