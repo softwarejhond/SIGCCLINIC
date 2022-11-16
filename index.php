@@ -292,7 +292,7 @@ h6 {
 #showcase .showcase-text {
     font-size: 3rem;
     width: 100%;
-    color: #fff;
+    color: #F9DA5A;
     margin-bottom: 1.5rem;
 }
 
@@ -303,7 +303,7 @@ h6 {
 
 /* Footer */
 #main-footer {
-    color: #ccc;
+    color: #F9DA5A;
     text-align: center;
     font-size: 0.8rem;
     max-width: 80%;
@@ -339,11 +339,11 @@ h6 {
     padding: 0.7rem 1rem;
     height: 2.7rem;
     display: block;
-    border: 1px solid #f4f4f4;
+    border: 1px solid #F9DA5A;
     border-radius: 2px;
     font-weight: 500;
     background: none;
-    color: #fff;
+    color: #F9DA5A;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
