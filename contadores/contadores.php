@@ -6,7 +6,7 @@ $numero = mysqli_num_rows($sql);
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <div class="card">
+            <div class="card efecto">
                 <div class="card-body">
                     <h5 class="card-title">Cantidad de Usuarios</h5>
                     <h1 class="card-text"><?php echo $numero?></h1>
@@ -14,7 +14,7 @@ $numero = mysqli_num_rows($sql);
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="card">
+            <div class="card efecto">
                 <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -23,7 +23,7 @@ $numero = mysqli_num_rows($sql);
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="card">
+            <div class="card efecto">
                 <div class="card-body">
                     <h5 class="card-title">Special title treatment</h5>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -34,7 +34,7 @@ $numero = mysqli_num_rows($sql);
     </div>
 </div>
 <style>
-  .card{
-    background-image: url(images/efectocard.png);
+  .efecto{
+    background-image: url(images/efectocards.png);
   }
 </style>
