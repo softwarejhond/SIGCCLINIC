@@ -121,7 +121,7 @@ include 'head.php';
 
                 <div class="or">
                     <hr class="bar" />
-                    <span><b>TODOS LOS DERECHOS RESERVADOS PARA FUNDACIÓN CERI</b></span>
+                    <span>  <img src="images/logo.png" alt="logo" width="100" style='text-aling:center;'></span>
                     <hr class="bar" />
                 </div>
             </div>
