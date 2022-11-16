@@ -2,7 +2,7 @@
 <footer class="text-center text-lg-start text-light" style="color: #ffffff; background: #009BFF;">
     <!-- Copyright -->
     <div class="text-center p-3" >
-        SISTEMA INTEGRAL DE GESTIÓN COMUNAL <br>
+        SISTEMA INTEGRAL DE GESTIÓN CLÍNICA <br>
         Todos los derechos reservados para:<br> 
         <?php
                               

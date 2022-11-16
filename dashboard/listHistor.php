@@ -46,7 +46,6 @@ if (mysqli_num_rows($sql) == 0) {
                            <td><a href="printHistory.php?nik=' . $row['numeroIdentificacion'] . '&code=' . $row['codigo'] . '&idDoct=' . $row['doctorCreator'] . '"id="send" title="Imprimir historia clínica" class="btn btn-outline-primary btn-sm"><span class="fa fa-print" aria-hidden="true"></span></a></td>
                            <td><a href="main.php?aksiHistory=deleteHistory&codigo=' . $row['codigo'] . '" title="Eliminar paciente" onclick="return confirm(\'Esta seguro de borrar la historia clinica: ' . $row['codigo'] . ' correspondiente al paciente ' . $row['nombre'] . " " . $row['apellidos'] . '?\')" class="btn btn-outline-danger btn-sm"><span class="fa fa-trash" aria-hidden="true"></span></a></td>
 
-                           
                         </tr>
 
 						';

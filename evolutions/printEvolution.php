@@ -1,19 +1,13 @@
 <?php
 // Initialize the session
 session_start();
-    // Establecer tiempo de vida de la sesión en segundos
-    $inactividad = 86400;
-    // Comprobar si $_SESSION["timeout"] está establecida
-    if(isset($_SESSION["timeout"])){
-        // Calcular el tiempo de vida de la sesión (TTL = Time To Live)
-        $sessionTTL = time() - $_SESSION["timeout"];
-        if($sessionTTL > $inactividad){
-            header("location: main.php");
-            exit;
-        }
-    }
-    // El siguiente key se crea cuando se inicia sesión
-    $_SESSION["timeout"] = time();
+ 
+// Check if the user is logged in, otherwise redirect to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: main.php");
+    exit;
+}
+ 
 // Include config file
 require_once "conexion.php";
  
@@ -40,7 +34,7 @@ require_once "conexion.php";
     }
 
     #areaImprimir {
-        background-image: url('./images/backPrint.png');
+        background-image: url('./images/back.png');
         background-origin: content-box;
         background-size: 100% 50%;
     }
@@ -82,8 +76,10 @@ require_once "conexion.php";
 				$row = mysqli_fetch_assoc($sqlHisotria);
                 $var= $row['doctorCreator'];
 			}
-			?>
-                            <div class="row">
+			?>       
+            <button id="send">firmar</button>
+
+            <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 px-2 mt-1 border border-dark"
                                     id="areaImprimir">
                                     <div style="text-align: center;">
@@ -96,8 +92,8 @@ require_once "conexion.php";
                                         <div class="row">
                                             <div class="text-left col-6"><b>Fecha de impresión:</b>
                                                 <?php echo date('d-m-Y');?></div>
-                                            <div class="text-right col-6"><b>Historia clínica #:</b>
-                                                <?php echo $row['id'];?></div>
+                                            <div class="text-right col-6"><b>Historia clinica #:</b>
+                                                <?php echo $rowPaciente['id'];?></div>
                                         </div>
 
                                         <img src="vistaLogo.php?id=1" alt='Logo' width="200px">
@@ -182,11 +178,7 @@ require_once "conexion.php";
                                             <td class="historiaClinica"><?php echo $rowPaciente['doctorAsignado'];?>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <th class="historiaClinica">RH:</th>
-                                            <td class="historiaClinica"><?php echo $rowPaciente['rh'];?>
-                                            </td>
-                                        </tr>
+
                                         <!------------------------------------------>
                                         <tr>
                                             <th class="historiaClinica">NOMBRE Y APELLIDOS ACOMPANANTE:</th>
@@ -601,17 +593,6 @@ require_once "conexion.php";
                                                 <br>
                                                 <img src="vistaFirmaHistoria.php?id='<?php echo '9'?>'" alt='Perfil'
                                                     class="rounded p-1" width="300px" />
-                                              <br>
-                                              <?php
-                               $usaurio= htmlspecialchars($_SESSION["username"]);
-                               $query = mysqli_query($con,"SELECT * FROM users WHERE username like '%$usaurio%'");
-                               while ($userLog = mysqli_fetch_array($query)) {
-                                echo '<h5  class="card-text px-2 mt-1">'.$userLog[nombre].'</h5>';  
-                                echo '<h5  class="card-text px-2">CC '.$userLog[username].'</h5>';
-                                echo '<h5  class="card-text px-2">'.$userLog[profesion].'</h5>';
-                                    
-                              }
-                                ?>
                                             </div>
 
                                             <?php
@@ -680,9 +661,6 @@ require_once "conexion.php";
                     <div class="card shadow p-2 mb-1 bg-white rounded">
                         <?php include('calendar.php');?>
                     </div>
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include('soporte.php');?>
-                    </div>
                 </div>
             </div>
         </div>
@@ -700,5 +678,4 @@ require_once "conexion.php";
     </script>
 
 </body>
-
 </html>

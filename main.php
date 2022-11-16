@@ -12,8 +12,7 @@ $query = mysqli_query($con,"SELECT nombre FROM users WHERE username like '%$filt
 while ($userLog = mysqli_fetch_array($query)) {
  $pacient=$userLog[nombre];
  }
-$generoFemenino = mysqli_query($con, "SELECT * FROM estudents WHERE genero='Femenino'");
-
+$materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padrinoEducativo like '%$filtro%' AND estadoIES='ACTIVO CON MATERIAS CANCELADAS'");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -21,7 +20,6 @@ $generoFemenino = mysqli_query($con, "SELECT * FROM estudents WHERE genero='Feme
 <head>
     <?php include 'head.php';?>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <style>
     th {
         width: 100px;
@@ -37,16 +35,12 @@ $generoFemenino = mysqli_query($con, "SELECT * FROM estudents WHERE genero='Feme
         <?php include 'nav.php';?>
         <h4 id="datos"></h4>
         <div class="container-fluid rounded">
-           
             <div class="row">
-                
                 <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
-                    
                     <div class="card">
                         <?php //muy importante
                          include "txtBanner.php";
                         ?>
-                      
                         <!--MENSAJES DE ELIMINAR EN CADA TABLA-->
                         <?php include './dashboard/alertEvolucionDelete.php';?>                       
                         <?php include './dashboard/alertHistoryDelete.php';?>                       
@@ -57,25 +51,28 @@ $generoFemenino = mysqli_query($con, "SELECT * FROM estudents WHERE genero='Feme
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                        aria-controls="home" aria-selected="true">Estudiantes</a>
+                                        aria-controls="home" aria-selected="true">Pacientes</a>
                                 </li>
                                 <li class="nav-item" role="presentation">
-                                     <a class="nav-link active" href="#" data-toggle="tab" role="tab"
-                                         aria-selected="true" tittle="Exportar tabla a exccel"><i class="fa fa-file-excel alert-success"></i> Exportar tabla</a>
-                                </li>
-                               <!-- <li class="nav-item" role="presentation">
                                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                                        aria-controls="profile" aria-selected="false">Certificados emitidos</a>
-                                </li>-->
+                                        aria-controls="profile" aria-selected="false">Historias</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                        aria-controls="contact" aria-selected="false">Evoluciones</a>
+                                </li>
                             </ul>
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="home" role="tabpanel"
                                     aria-labelledby="home-tab">
-                                    <?php include './dashboard/listEstudents.php';?>
+                                    <?php include './dashboard/listPatient.php';?>
                                 </div>
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <?php include './dashboard/listCertificate.php';?>
+                                    <?php include './dashboard/listHistor.php';?>
                                 </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                
+                                <?php include './dashboard/listEvolution.php';?></div>
                             </div>
                             <br>
                         </div>
@@ -89,8 +86,7 @@ $generoFemenino = mysqli_query($con, "SELECT * FROM estudents WHERE genero='Feme
                         <?php include 'calendar.php';?>
                     </div>
                     <div class="card shadow p-2 mb-1 bg-white rounded">
-                    <?php include('soporte.php');?>
-                    
+                        <?php include('soporte.php');?>
                     </div>
                 </div>
             </div>
@@ -120,9 +116,9 @@ var tableToExcel = (function() {
             })
         }
     return function(table, name) {
-        if (!table.nodeType) table = document.getElementById(myTable)
+        if (!table.nodeType) table = document.getElementById(table)
         var ctx = {
-            worksheet: name || 'Lista de estudiantes',
+            worksheet: name || 'Worksheet',
             table: table.innerHTML
         }
         window.location.href = uri + base64(format(template, ctx))

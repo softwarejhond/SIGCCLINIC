@@ -51,7 +51,7 @@ session_start();
                                $usaurio= htmlspecialchars($_SESSION["username"]);
                                $query = mysqli_query($con,"SELECT nombre FROM users WHERE username like '%$usaurio%'");
                                while ($userLog = mysqli_fetch_array($query)) {
-                                echo '<span  class="card-text px-2 mt-1">'.$userLog['nombre'].'</span>';
+                                echo '<span  class="card-text px-2 mt-1">'.$userLog[nombre].'</span>';
                                 }
                                 ?>
             </button>
