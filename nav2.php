@@ -292,7 +292,7 @@
 
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
-    transition: all 0.5s ease;
+    transition: all 0.5s ease; 
     color: #11101D;
 }
 
