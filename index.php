@@ -265,6 +265,13 @@ h6 {
 }
 
 /* Showcase */
+#showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 100vh;
+    text-align: center;
+}
 .imageCycle1{
     background:url(images/fond.png);
     background-repeat:no-repeat;
