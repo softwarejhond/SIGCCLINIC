@@ -252,11 +252,11 @@ h6 {
     flex: auto;
     border: none;
     height: 1px;
-    background: #aaa;
+    background: #F9DA5A;
 }
 
 #signin .or span {
-    color: #ccc;
+    color: #000000;
     padding: 0 0.8rem;
 }
 
@@ -310,7 +310,7 @@ h6 {
 }
 
 #main-footer a {
-    color: #F9DA5A;
+    color: #000000;
     text-decoration: underline;
 }
 
