@@ -131,7 +131,13 @@ include 'head.php';
             Eagle Software</a>
             </footer>
         </div>
-      
+        <div id="right">
+            <div id="showcase">
+                <div class="showcase-content">
+               
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <style>
