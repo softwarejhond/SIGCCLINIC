@@ -1,5 +1,5 @@
 <div class="card text-center">
-     <div class="card-header" style="background-color:#FFD500">
+     <div class="card-header" style="background-color:#F9DA5A">
          <i class="fas fa-user-injured"></i> LISTA DE PACIENTES <i class="fas fa-user-injured"></i>
      </div>
      <div class="card-body">
@@ -59,7 +59,7 @@ if (mysqli_num_rows($sql) == 0) {
              </tbody>
          </table>
      </div>
-     <div class="card-footer "style="background-color:#FFD500">
+     <div class="card-footer "style="background-color:#F9DA5A">
          <i class="fas fa-clock"></i>
          <?php
                                         $DateAndTime = date('m-d-Y h:i:s a', time());
