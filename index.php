@@ -197,7 +197,7 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     padding-bottom: 1rem;
     background-color: rgba(0, 197, 255, 0.7);
 }
