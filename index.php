@@ -12,7 +12,7 @@ include 'head.php';
             <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
                 <div class="container-fluid">
                     <div class="row">
-                        <h2>Log In</h2>
+                        <h2>Iniciar sesión</h2>
                     </div>
                     <div class="row">
                         <form control="" class="form-group">
@@ -139,6 +139,38 @@ form {
     background-color: #008080;
     color: #fff;
 }
+
+.imageCycle1{
+    background:url(images/fond.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale')";
+}
+.imageCycle2{
+    background:url(images/back.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale')";
+}
+
 </style>
+<script>
+	//funcion para imagenes aleatorias
+$(document).ready(function(){
+    var classCycle=['imageCycle1','imageCycle2'];
+
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+    
+    $('body').addClass(classToAdd);
+
+});
+</script>
 
 </html>
