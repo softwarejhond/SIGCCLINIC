@@ -5,8 +5,7 @@ include 'head.php';
 ?>
 
 <body>
-    <div id="wrapper">
-    <?php
+<?php
 // Initialize the session
 session_start();
     // Establecer tiempo de vida de la sesión en segundos
@@ -102,6 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($con);
 }
 ?>
+    <div id="wrapper">
         <div id="left">
             <div id="signin">
                 <div class="logo">
