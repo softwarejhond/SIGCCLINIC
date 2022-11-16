@@ -128,7 +128,7 @@ include 'head.php';
             </div>
             <footer id="main-footer">
             <p class="text-center login__forgot">SIGC &copy; Copyright <?php echo date("Y");?></p>
-        <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">Made by Agencia de Desarrollo
+         <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">Made by Agencia de Desarrollo
             Eagle Software</a>
             </footer>
         </div>
@@ -180,6 +180,7 @@ h6 {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: black;
 }
 
 #right {
