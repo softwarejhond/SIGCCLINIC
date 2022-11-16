@@ -111,11 +111,11 @@ include 'head.php';
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div>
                         <label>Usuario ID </label>
-                        <input type="number" name="username" class="text-input" />
+                        <input type="number" name="username" class="text-input text-center" />
                     </div>
                     <div>
                         <label>Contraseña</label>
-                        <input type="password" name="password" class="text-input" />
+                        <input type="password" name="password" class="text-input text-center" />
                     </div>
                     <button type="submit" class="primary-btn">Iniciar sesión</button>
                 </form>
