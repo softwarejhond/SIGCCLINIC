@@ -10,7 +10,7 @@
   <div class="topLayer">
     <div class="left">
       <div class="content">
-        <h2>Iniciar sesión</h2>
+        <h2>Sign Up</h2>
         <form id="form-signup" method="post" onsubmit="return false;">
           <div class="form-element form-stack">
             <label for="email" class="form-label">Email</label>
@@ -56,8 +56,9 @@
     </div>
   </div>
 </div>
+
  <style>
-    $theme-signup: #03A9F4;
+  $theme-signup: #03A9F4;
 $theme-signup-darken: #0288D1;
 $theme-signup-background: #2C3034;
 $theme-login: #673AB7;
