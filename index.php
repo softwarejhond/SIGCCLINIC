@@ -120,7 +120,7 @@ include 'head.php';
                                 <div class="input-group-text" id="viewPassword"><i class="fa fa-eye"></i></div>
                            
                             <input type="password" name="password" class="text-input text-center form-control-lg" id="password"
-                                placeholder="Contraseña">
+                                placeholder="Contraseña"> 
                                 </div>
                         </div>
                     </div>
