@@ -26,6 +26,7 @@
 .wrap {
     width: 100%;
     /*margin:auto;*/
+    background-image:url(images/card.png);
     color: #000;
 }
 
