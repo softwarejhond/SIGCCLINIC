@@ -115,7 +115,7 @@ include 'head.php';
                     <div>
                         <label>Contraseña</label>
                         <input type="password" name="password" id="password" placeholder="*******" class="text-input text-center form-control-lg" />
-                        <span>Mostrar</span>
+                        <button>Mostrar</button>
                     </div>
                     <button type="submit" class="primary-btn"><b>Iniciar sesión</b></button>
                 </form>
@@ -394,7 +394,7 @@ $(document).ready(function(){
 });
 </script>
 <script>
-    document.querySelector('.signin span').addEventListener('click', e => {
+    document.querySelector('.signin button').addEventListener('click', e => {
     const passwordInput = document.querySelector('#password');
     if (e.target.classList.contains('show')) {
         e.target.classList.remove('show');
