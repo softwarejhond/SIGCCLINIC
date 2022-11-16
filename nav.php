@@ -17,7 +17,7 @@ session_start();
 // Include config file
   include "conexion.php";
   ?>
-<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: rgba(8, 160, 206,1.0); color:#000">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: rgba(8, 160, 206,1.0); color:#F9DA5A">
     <a class="navbar-brand" href="main.php"><img src="images/logoo.png" width="50px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
