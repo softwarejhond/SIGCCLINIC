@@ -265,14 +265,25 @@ h6 {
 }
 
 /* Showcase */
-#showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('https://image.ibb.co/cO9Lxq/login-bg.jpg') no-repeat center center / cover;
-    height: 100vh;
-    text-align: center;
+.imageCycle1{
+    background:url(images/fond.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale')";
 }
+.imageCycle2{
+    background:url(images/back.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale')";
+}
+
 
 #showcase .showcase-text {
     font-size: 3rem;
@@ -378,5 +389,16 @@ h6 {
     }
 }
 </style>
+<script>
+	//funcion para imagenes aleatorias
+$(document).ready(function(){
+    var classCycle=['imageCycle1','imageCycle2'];
 
+    var randomNumber = Math.floor(Math.random() * classCycle.length);
+    var classToAdd = classCycle[randomNumber];
+    
+    $('body').addClass(classToAdd);
+
+});
+</script>
 </html>
