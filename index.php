@@ -315,7 +315,7 @@ h6 {
 }
 
 #main-footer a {
-    color: #f96816;
+    color: #68A4FF;
     text-decoration: underline;
 }
 
@@ -327,7 +327,7 @@ h6 {
     border: 0;
     border-radius: 2px;
     font-weight: 500;
-    background: #f96816;
+    background: #68A4FF;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -336,7 +336,7 @@ h6 {
 }
 
 .primary-btn:hover {
-    background-color: #ff7b39;
+    background-color: #68A4FF;
 }
 
 .secondary-btn {
