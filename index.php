@@ -181,7 +181,7 @@ h6 {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image:linear-gradient(rgba(255, 193, 0, 0.8), rgba(255, 193, 0,.8)), url(images/fondo.png);
+    background-image:linear-gradient(rgba(199, 0, 57, 0.8), rgba(199, 0, 57,.8)), url(images/fondo.png);
     box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
     background-size: cover;
 }
