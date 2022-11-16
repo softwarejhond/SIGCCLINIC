@@ -118,12 +118,6 @@ include 'head.php';
                     </div>
                     <button type="submit" class="primary-btn"><b>Iniciar sesión</b></button>
                 </form>
-
-                <div class="or">
-                    <hr class="bar" />
-                    <span>  <img src="images/logo.png" alt="logo" width="100" style='text-aling:center;'></span>
-                    <hr class="bar" />
-                </div>
             </div>
             <footer id="main-footer">
             <p class="text-center login__forgot">SIGC &copy; Copyright <?php echo date("Y");?></p>
@@ -248,12 +242,6 @@ h6 {
     align-items: center;
 }
 
-#signin .or .bar {
-    flex: auto;
-    border: none;
-    height: 1px;
-    background: #F9DA5A;
-}
 
 #signin .or span {
     color: #000000;
