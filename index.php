@@ -8,7 +8,7 @@ include 'head.php';
     <div class="container-fluid">
         <div class="row main-content bg-success text-center">
             <div class="col-md-4 text-center company__info">
-                <img src="images/logoo.png" alt="logo" width="250px" style="text-aling:center;"> </div>
+                <img src="images/logoo.png" alt="logo" class="w-100" style="text-aling:center;"> </div>
             <div class="col-md-8 col-xs-12 col-sm-12 login_form ">
                 <div class="container-fluid">
                     <div class="row">
