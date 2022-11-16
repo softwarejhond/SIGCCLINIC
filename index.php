@@ -179,7 +179,8 @@ h6 {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: black;
+    background-color: (0,0%,30%);
+
 }
 
 #right {
