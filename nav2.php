@@ -120,7 +120,7 @@
     top: 0;
     height: 100%;
     width: 78px;
-    background-color: rgba(8, 160, 206,1.0);
+    background-color: rgba(8, 160, 206,1.0); 
     padding: 6px 14px;
     z-index: 99;
     transition: all 0.5s ease;
