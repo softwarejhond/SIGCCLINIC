@@ -268,7 +268,7 @@
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
-    background:rgb(255, 234, 0);
+    background:#68A4FF;
 }
 
 .sidebar li a:hover {
@@ -276,7 +276,7 @@
 }
 
 .sidebar li a .links_name {
-    color: #000; 
+    color: #FCFCFF; 
     font-size: 15px;
     font-weight: 400;
     white-space: nowrap;
@@ -292,7 +292,7 @@
 
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
-    transition: all 0.5s ease; 
+    transition: all 0.5s ease;
     color: #11101D;
 }
 
