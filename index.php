@@ -314,7 +314,7 @@ h6 {
 }
 
 #main-footer a {
-    color: #68A4FF;
+    color: #E35658;
     text-decoration: underline;
 }
 
@@ -326,7 +326,7 @@ h6 {
     border: 0;
     border-radius: 2px;
     font-weight: 500;
-    background: #68A4FF;
+    background: #E35658;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -335,7 +335,7 @@ h6 {
 }
 
 .primary-btn:hover {
-    background-color: #68A4FF;
+    background-color: #E35658;
 }
 
 .secondary-btn {
@@ -354,8 +354,8 @@ h6 {
 }
 
 .secondary-btn:hover {
-    border-color: #ff7b39;
-    color: #ff7b39;
+    border-color: #E35658;
+    color: #E35658;
 }
 
 /* Media Queries */
