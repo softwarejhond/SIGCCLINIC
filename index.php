@@ -196,12 +196,11 @@ h6 {
     display: flex;
     flex-direction: column;
     flex: 1;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    justify-content: center;
     height: 100vh;
-    padding-bottom: 1rem;
     background-color: rgba(0, 197, 255, 0.7);
+    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
     background-size: cover;
 }
 
