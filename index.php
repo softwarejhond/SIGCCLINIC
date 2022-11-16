@@ -276,8 +276,8 @@ h6 {
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fondo1.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fondo2.png',sizingMethod='scale')";
 }
 
 .imageCycle2 {
