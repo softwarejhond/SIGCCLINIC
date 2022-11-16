@@ -36,22 +36,22 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
         <h4 id="datos"></h4>
         <div class="container-fluid rounded">
             <div class="row">
-                <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
+                <div class="col-lg-12 col-md-12 col-sm-12 px-2 mt-1">
                     <div class="card">
                         <?php //muy importante
                          include "txtBanner.php";
                         ?>
                         <!--MENSAJES DE ELIMINAR EN CADA TABLA-->
-                        <?php include './dashboard/alertEvolucionDelete.php';?>                       
-                        <?php include './dashboard/alertHistoryDelete.php';?>                       
-                        <?php include './dashboard/alertPatientDelete.php';?>   \
-</br>
+                        <?php include './dashboard/alertEvolucionDelete.php';?>
+                        <?php include './dashboard/alertHistoryDelete.php';?>
+                        <?php include './dashboard/alertPatientDelete.php';?> \
+                        </br>
                         <div class="container">
-                        <?php //muy importante
+                            <?php //muy importante
                          include "contadores/contadores.php";
                         ?>
                         </div>
-</br>
+                        </br>
                         <div class="container">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
@@ -76,31 +76,16 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
                                     <?php include './dashboard/listHistor.php';?>
                                 </div>
                                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                                
-                                <?php include './dashboard/listEvolution.php';?></div>
+
+                                    <?php include './dashboard/listEvolution.php';?></div>
                             </div>
                             <br>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12 col-sm-12 px-2 mt-1">
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include 'reloj.php';?>
-                    </div>
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include 'calendar.php';?>
-                    </div>
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include('soporte.php');?>
-                    </div>
-                </div>
             </div>
         </div>
-
-      
-        <br><br>
-        <?php include 'footer.php';
-?>
+        <?php include 'footer.php';?>
     </section>
     <!-- MENSAJE DE BIENVENIDA TOAST-->
 
