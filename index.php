@@ -8,7 +8,7 @@ include 'head.php';
       <div id="left">
         <div id="signin">
           <div class="logo">
-          <img src="images/logoo.png" alt="logo" width="150px" style='text-aling:center;'>
+          <img src="images/logoo.png" alt="logo" width="130px" style='text-aling:center;'>
  </div>
           <form>
             <div>
