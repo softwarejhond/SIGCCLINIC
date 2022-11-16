@@ -111,7 +111,7 @@ include 'head.php';
                     <div>
                         <label>Usuario ID:</label>
                         <div class="input-group-prepend">
-                                <div class="input-group-text form-control-lg text-input" id="viewPassword"><i class="fa fa-user"></i></div>
+                                <div class="input-group-text form-control-lg" id="viewPassword"><i class="fa fa-user" style="cursor:pointer ;"></i></div>
                            
                         <input type="number" name="username" placeholder="1234567890"
                             class="text-input text-center form-control-lg" />
@@ -120,7 +120,7 @@ include 'head.php';
                     <div>
                     <label>Contraseña:</label>
                             <div class="input-group-prepend">
-                                <div class="input-group-text form-control-lg text-input" id="viewPassword"><i class="fa fa-eye"></i></div>
+                                <div class="input-group-text form-control-lg" id="viewPassword"><i class="fa fa-eye" style="cursor:pointer ;"></i></div>
                            
                             <input type="password" name="password" class="text-input text-center form-control-lg w-100" id="password"
                                 placeholder="Contraseña"> 
