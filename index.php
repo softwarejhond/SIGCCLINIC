@@ -109,17 +109,17 @@ include 'head.php';
                 </div>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div>
-                        <label>Usuario ID </label>
+                        <label>Usuario ID:</label>
                         <input type="number" name="username" placeholder="1234567890"
                             class="text-input text-center form-control-lg" />
                     </div>
                     <div>
-                        <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
                         <div class="input-group mb-2 mr-sm-2">
+                        <label>Contraseña:</label>
                             <div class="input-group-prepend">
                                 <div class="input-group-text" id="viewPassword"><i class="fa fa-eye"></i></div>
                             </div>
-                            <input type="password" name="password" class="text-center form-control-lg w-auto aler" id="password"
+                            <input type="password" name="password" class="text-input text-center form-control-lg" id="password"
                                 placeholder="Contraseña">
                         </div>
                     </div>
