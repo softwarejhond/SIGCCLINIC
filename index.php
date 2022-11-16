@@ -153,7 +153,7 @@ include 'head.php';
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    background: #181818;
+    background: #E35658;
     color: #fff;
     overflow: hidden;
 }
