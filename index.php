@@ -110,8 +110,12 @@ include 'head.php';
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div>
                         <label>Usuario ID:</label>
+                        <div class="input-group-prepend">
+                                <div class="input-group-text form-control-lg" id="viewPassword"><i class="fa fa-user"></i></div>
+                           
                         <input type="number" name="username" placeholder="1234567890"
                             class="text-input text-center form-control-lg" />
+                        </div>
                     </div>
                     <div>
                     <label>Contraseña:</label>
