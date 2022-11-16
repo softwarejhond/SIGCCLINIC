@@ -117,7 +117,7 @@ include 'head.php';
                         <label>Contraseña</label>
                         <input type="password" name="password" placeholder="*******" class="text-input text-center form-control-lg" />
                     </div>
-                    <button type="submit" class="primary-btn">Iniciar sesión</button>
+                    <button type="submit" class="primary-btn"><b>Iniciar sesión</b></button>
                 </form>
 
                 <div class="or">
