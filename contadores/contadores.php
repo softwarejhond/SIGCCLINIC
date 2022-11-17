@@ -3,10 +3,10 @@ require_once "conexion.php";
 $sql = mysqli_query($con,"SELECT * FROM patient");
 $numero = mysqli_num_rows($sql);
 
-$sqlMan = mysqli_query($con,"SELECT * FROM patient WHERE genero='Masculino' or genero='MASCULINO'");
+$sqlMan = mysqli_query($con,"SELECT * FROM patient WHERE genero='Masculino' AND genero='MASCULINO'");
 $numeroMan = mysqli_num_rows($sqlMan);
 
-$sqlFemale = mysqli_query($con,"SELECT * FROM patient WHERE genero='Femenino' or genero='FEMENINO");
+$sqlFemale = mysqli_query($con,"SELECT * FROM patient WHERE genero='Femenino' AND genero='FEMENINO");
 $numeroFemale = mysqli_num_rows($sqlFemale);
     ?>
 <div class="container">
