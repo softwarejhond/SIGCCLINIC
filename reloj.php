@@ -34,7 +34,6 @@
 
 .widget p {
     display: inline-block;
-    line-height: 1em;
 }
 
 .fecha {
