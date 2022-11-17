@@ -1,26 +1,9 @@
 <div class="card text-center">
-     <div class="card-header" style="background-image:url(images/footer.png); color:#fff">
-         <i class="fas fa-user-injured"></i> LISTA DE PACIENTES <i class="fas fa-user-injured"></i>
-     </div>
-     <div class="card-body">
-         <table id="myTable" class=" table table-hover table-bordered table-lg table-responsive">
-             <thead class="thead-dark">
-                 <tr>
-                     <th>#</th>
-                     <th>Documento</th>
-                     <th class="w-25">Nombre</th>
-                     <th class="w-25">Apellidos</th>
-                     <th class="w-10">Celular</th>
-                     <th class="w-50">Doctor</th>
-                     <th class="w-50"> </th>
-                     <th class="w-50"> </th>
-                     <th class="w-50"> </th>
-                     <th class="w-50"> </th>
-                 </tr>
-             </thead>
-             <tbody>
-                 <?php
-
+    <div class="card-header" style="background-image:url(images/footer.png); color:#fff">
+        <i class="fas fa-user-injured"></i> LISTA DE PACIENTES <i class="fas fa-user-injured"></i>
+    </div>
+    <div class="card-body">
+        <?php
 $buscar = $_POST["buscador"];
 $usaurio = htmlspecialchars($_SESSION["numeroIdentificacion"]);
 if ($filter) {
@@ -56,20 +39,18 @@ if (mysqli_num_rows($sql) == 0) {
     }
 }
 ?>
-             </tbody>
-         </table>
-     </div>
-     <div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
-         <i class="fas fa-clock"></i>
-         <?php
+    </div>
+    <div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
+        <i class="fas fa-clock"></i>
+        <?php
                                         $DateAndTime = date('m-d-Y h:i:s a', time());
                                         echo "Actualizado $DateAndTime.";
                                     ?>
-     </div>
+    </div>
 
- </div>
- <script>
-        $(document).ready(function() {
-            $(".toastPatient").toast('show');
-        });
+</div>
+<script>
+$(document).ready(function() {
+    $(".toastPatient").toast('show');
+});
 </script>
