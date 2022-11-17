@@ -9,7 +9,7 @@
     --calendar-current-date-color: #fff;
     --calendar-today-color: #FF3B3E;
     --calendar-today-innerborder-color: #fff;
-    --calendar-nextprev-bg-color: #1a1f21;
+    --calendar-nextprev-bg-color: #fff;
 }
 
 * {
