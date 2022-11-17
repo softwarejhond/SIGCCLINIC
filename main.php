@@ -79,11 +79,12 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 px-2 mt-1">
-                <div class="card">
-                <?php include 'reloj.php';?>
-                </div>
+                    <div class="card">
+                        <?php include 'reloj.php';?>
+                    </div>
                 </div>
             </div>
+            </br></br>
         </div>
         <?php include 'footer.php';?>
     </section>
