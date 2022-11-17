@@ -25,7 +25,6 @@ $numero = mysqli_num_rows($sql);
         <div class="col-sm-4">
             <div class="card efecto alert-info">
                 <div class="card-body">
-                  <?php   include "reloj.php";?>
                 </div>
             </div>
         </div>
