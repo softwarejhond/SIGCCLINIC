@@ -5,6 +5,9 @@ $numero = mysqli_num_rows($sql);
 
 $sqlMan = mysqli_query($con,"SELECT * FROM patient WHERE genero='Masculino'");
 $numeroMan = mysqli_num_rows($sqlMan);
+
+$sqlFemale = mysqli_query($con,"SELECT * FROM patient WHERE genero='Femenino'");
+$numeroFemale = mysqli_num_rows($sqlFemale);
     ?>
 <div class="container">
     <div class="row">
@@ -25,8 +28,10 @@ $numeroMan = mysqli_num_rows($sqlMan);
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="card efecto alert-info">
+        <div class="card efecto alert-info">
                 <div class="card-body">
+                    <h5 class="card-title">Mujeres</h5>
+                     <h1 class="card-text"><i class="fa fa-female"></i> <?php echo $numeroFemale?></h1>
                 </div>
             </div>
         </div>
