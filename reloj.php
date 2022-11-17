@@ -40,7 +40,7 @@
 
 .fecha {
     text-align: center;
-    font-size: 20px;
+    font-size: 14px;
     /*margin-bottom: 5px;*/
     padding: 10px;
     width: 100%;
