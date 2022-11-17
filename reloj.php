@@ -1,5 +1,5 @@
-<div class="wrap">
-    <div class="widget alert-info">
+<div class="wrap alert-info">
+    <div class="widget ">
         <div class="fecha font-weight-bold">
             <p id="diaSemana" class="diaSemana">Martes</p>
             <p id="dia" class="dia">27</p>
@@ -8,7 +8,6 @@
             <p>del </p>
             <p id="year" class="year">2015</p>
         </div>
-
         <div class="reloj">
             <p id="horas" class="horas">11</p>
             <p>:</p>
