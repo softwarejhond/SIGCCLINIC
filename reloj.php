@@ -26,8 +26,9 @@
 .wrap {
     width: 100%;
     /*margin:auto;*/
-     background-image:url(images/footer.png);
-    color: #000;
+    background-image:linear-gradient(rgba(2, 52, 81, 0.8), rgba(8, 160, 206,0.8)), url(images/efectocards.png);
+     background-size: cover;
+    color: #FF3B3E;
 }
 
 .widget {
