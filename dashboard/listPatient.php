@@ -6,7 +6,7 @@
 
         <ul class="list-group">
             <li class="list-group-item">
-                <form method="post">
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <div class="form-row align-items-center">
                         <div class="col-auto">
                             <label class="sr-only" for="inlineFormInput">Curso</label>
