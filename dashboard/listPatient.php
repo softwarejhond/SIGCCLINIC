@@ -24,7 +24,7 @@
 $buscar = $_POST["buscador"];
 $usaurio = htmlspecialchars($_SESSION["numeroIdentificacion"]);
 if ($filter) {
-    echo '<tr><td colspan="8">esperando.</td></tr>';
+    $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$buscar%' ORDER BY nombre ASC");
 } else {
     $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$buscar%' ORDER BY nombre ASC");
 }
@@ -52,7 +52,7 @@ if (mysqli_num_rows($sql) == 0) {
 
 
 						';
-        $no++;
+        
     }
 }
 ?>
