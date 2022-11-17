@@ -10,10 +10,6 @@
 
             <label class="form-label">Palabra a buscar</label>
             <input type="text" class="form-control" id="buscar" name="buscar">
-
-            <label class="form-label">Palabra a buscar instantaneo</label>
-            <input onkeyup="buscar_ahora($('#buscar_1').val());" type="text" class="form-control" id="buscar_1" name="buscar_1">
-
         </div>
         <button  class="btn btn-primary" onclick="buscar_ahora($('#buscar').val());">Buscar</button>
 
@@ -32,7 +28,7 @@
         $.ajax({
         data:parametros,
         type: 'POST',
-        url: 'dashboard/buscador.php',
+        url: 'buscador.php',
         success: function(data) {
         document.getElementById("datos_buscador").innerHTML = data;
         }
