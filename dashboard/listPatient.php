@@ -25,7 +25,7 @@ $buscar = $_POST["buscador"];
 $usaurio = htmlspecialchars($_SESSION["numeroIdentificacion"]);
 if ($filter) {
     $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$buscar%' ORDER BY nombre ASC");
-}
+} 
 if (mysqli_num_rows($sql) == 0) {
     echo '<tr><td colspan="8">No hay datos.</td></tr>';
 } else {
