@@ -43,6 +43,6 @@ $numeroFemale = mysqli_num_rows($sqlFemale);
   .efecto{
     background-image: url(images/efectocards.png);
     background-size: cover;
-    border-radius: 30px;
+    border-radius: 10px;
   }
 </style>
