@@ -36,7 +36,7 @@
 if(!empty($_POST))
 {
       $aKeyword = explode(" ", $_POST['PalabraClave']);
-      $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$aKeyword%' ORDER BY nombre ASC");
+      $query = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$aKeyword%' ORDER BY nombre ASC");
       
      for($i = 1; $i < count($aKeyword); $i++) {
         if(!empty($aKeyword[$i])) {
