@@ -1,39 +1,3 @@
-  <div class="container">
-        <h4 class="mt-5">Buscador avanzado con PHP & MySQL</h4>
-        <hr>
-
-        <div class="row">
-            <div class="col-12 col-md-12">
-                <!-- Contenido -->
-
-
-
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <form method="post">
-                            <div class="form-row align-items-center">
-                                <div class="col-auto">
-                                    <label class="sr-only" for="inlineFormInput">Curso</label>
-                                    <input required name="PalabraClave" type="text" class="form-control mb-2"
-                                        id="inlineFormInput" placeholder="Ingrese palabra clave">
-                                    <input name="buscar" type="hidden" class="form-control mb-2" id="inlineFormInput"
-                                        value="v">
-                                </div>
-
-                                <div class="col-auto">
-                                    <button type="submit" class="btn btn-primary mb-2">Buscar Ahora</button>
-                                </div>
-                            </div>
-                        </form>
-                    </li>
-
-                </ul>
-
-                <!-- Fin Contenido -->
-            </div>
-        </div><!-- Fin row -->
-    </div><!-- Fin container -->
-
 <div class="card text-center">
      <div class="card-header" style="background-image:url(images/footer.png); color:#fff">
          <i class="fas fa-user-injured"></i> LISTA DE PACIENTES <i class="fas fa-user-injured"></i>
@@ -60,9 +24,9 @@
 $buscar = $_POST["buscador"];
 $usaurio = htmlspecialchars($_SESSION["numeroIdentificacion"]);
 if ($filter) {
-    $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$buscar%' ORDER BY nombre ASC");
+    echo '<tr><td colspan="8">esperando.</td></tr>';
 } else {
-    echo '<tr><td colspan="8">Esperando paciente para buscar.</td></tr>';
+    $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$buscar%' ORDER BY nombre ASC");
 }
 if (mysqli_num_rows($sql) == 0) {
     echo '<tr><td colspan="8">No hay datos.</td></tr>';
