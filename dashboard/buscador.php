@@ -9,8 +9,7 @@ $numero = mysqli_num_rows($buscardor); ?>
 <?php while($resultado = mysqli_fetch_assoc($buscardor)){ ?>
 
 
-<p class="card-text"><?php echo $resultado["nombre"]; ?> - <?php echo $resultado["tema"] ?>
-
+<p class="card-text"><?php echo $resultado["numeroIdentificacion"]; ?>
 </p>
 
 
