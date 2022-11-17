@@ -1,6 +1,6 @@
 <div class="wrap alert-info">
     <div class="widget ">
-        <div class="fecha font-weight-bold">
+        <div class="fecha font-weight-bold alert-info">
             <p id="diaSemana" class="diaSemana">Martes</p>
             <p id="dia" class="dia">27</p>
             <p>de </p>
