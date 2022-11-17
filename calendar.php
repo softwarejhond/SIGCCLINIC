@@ -2,8 +2,8 @@
 <style>
     @import url('https://fonts.googleapis.com/css?family=Nunito:400,600');
 :root {
-    --calendar-bg-color: #01A7F0;
-    --calendar-font-color: #FFF;
+    --calendar-bg-color: #fff;
+    --calendar-font-color: #000;
     --weekdays-border-bottom-color: #404040;
     --calendar-date-hover-color: #505050;
     --calendar-current-date-color: #1b1f21;
