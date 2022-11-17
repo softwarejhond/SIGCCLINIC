@@ -1,87 +1,75 @@
 <div class="card text-center">
-    <div class="card-header" style="background-image:url(images/footer.png); color:#fff">
-        <i class="fas fa-user-injured"></i> LISTA DE PACIENTES <i class="fas fa-user-injured"></i>
-    </div>
-    <div class="card-body">
-    <div class="container mt-5">
-    <div class="col-12">
+     <div class="card-header" style="background-image:url(images/footer.png); color:#fff">
+         <i class="fas fa-user-injured"></i> LISTA DE PACIENTES <i class="fas fa-user-injured"></i>
+     </div>
+     <div class="card-body">
+         <table id="myTable" class=" table table-hover table-bordered table-lg table-responsive">
+             <thead class="thead-dark">
+                 <tr>
+                     <th>#</th>
+                     <th>Documento</th>
+                     <th class="w-25">Nombre</th>
+                     <th class="w-25">Apellidos</th>
+                     <th class="w-10">Celular</th>
+                     <th class="w-50">Doctor</th>
+                     <th class="w-50"> </th>
+                     <th class="w-50"> </th>
+                     <th class="w-50"> </th>
+                     <th class="w-50"> </th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <?php
 
-        <div class="mb-3">
+$buscar = $_POST["buscador"];
+$usaurio = htmlspecialchars($_SESSION["numeroIdentificacion"]);
+if ($filter) {
+    $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$buscar%' ORDER BY nombre ASC");
+} else {
+    $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$buscar%' ORDER BY nombre ASC");
+}
+if (mysqli_num_rows($sql) == 0) {
+    echo '<tr><td colspan="8">No hay datos.</td></tr>';
+} else {
+    $no = 1;
+    while ($row = mysqli_fetch_assoc($sql)) {
+        echo '
 
-            <label class="form-label">Palabra a buscar</label>
-            <input type="text" class="form-control" id="buscar" name="buscar">
-        </div>
-        <button  class="btn btn-primary" onclick="buscar_ahora($('#buscar').val());">Buscar</button>
+						  <tr style="font-size:12px">
+						    <td>' . $no . '</td>
+                            <td>' . $row['numeroIdentificacion'] . '</td>
+                            <td>' . $row['nombre'] . '</td>
+                            <td>' . $row['apellidos'] . '</td>
+                            <td>' . $row['telefonoCelular'] . '</td>
+                            <td>' . $row['doctorAsignado'] . '</td>
 
-        <div class="card col-12 mt-5">
-            <div class="card-body">
-                <div id="datos_buscador" class="container pl-5 pr-5"></div>
-            </div>
-        </div>
-        
-    </div>
-</div>
+                            <td><a href="historiaClinica.php?nik=' . $row['numeroIdentificacion'] . '"title="Realizar historia clínica" class="btn btn-outline-success btn-sm" "><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
+                            <td><a href="evolucionesClinicas.php?nik=' . $row['numeroIdentificacion'] . '" title="Realizar valoración clínica" class="btn btn-outline-info btn-sm"><span class="fa fa-feather-alt" aria-hidden="true"></span></a></td>
+                            <td><a href="upd_paciente.php?nik=' . $row['numeroIdentificacion'] . '" title="Editar paciente" class="btn btn-outline-warning btn-sm"><span class="fa fa-edit" aria-hidden="true"></span></a></td>
+                            <td><a href="main.php?aksi=delete&nik=' . $row['numeroIdentificacion'] . '" title="Eliminar paciente" onclick="return confirm(\'Esta seguro de borrar al paciente ' . $row['nombre'] . " " . $row['apellidos'] . '?\')" class="btn btn-outline-danger btn-sm"><span class="fa fa-trash" aria-hidden="true"></span></a></td>
 
-<script type="text/javascript">
-        function buscar_ahora(buscar) {
-        var parametros = {"buscar":buscar};
-        $.ajax({
-        data:parametros,
-        type: 'POST',
-        url: 'dashboard/buscador.php',
-        success: function(data) {
-        document.getElementById("datos_buscador").innerHTML = data;
-        }
-        });
-        }
-     //   buscar_ahora();
-</script>
+                          </tr>
 
 
-
-
-
-
-        <ul class="list-group">
-            <li class="list-group-item">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                    <div class="form-row align-items-center">
-                        <div class="col-auto">
-                            <label class="sr-only" for="inlineFormInput">Curso</label>
-                            <input required name="PalabraClave" type="text" class="form-control mb-2"
-                                id="inlineFormInput" placeholder="Ingrese palabra clave">
-                            <input name="buscar" type="hidden" class="form-control mb-2" id="inlineFormInput" value="v">
-                        </div>
-
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary mb-2">Buscar Ahora</button>
-                        </div>
-                    </div>
-                </form>
-            </li>
-
-        </ul>
-
-        <?php
-$buscar = $_POST["buscar"];
-
-$buscarpaciente = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion LIKE %'$buscar'%");
-while ($pacienteEncontrado = mysqli_fetch_array($buscarpaciente)) {
- echo '<p class="text-right" style="font-size:12px">'.$pacienteEncontrado['nombre'].'</p>';
- }
+						';
+        $no++;
+    }
+}
 ?>
-    </div>
-    <div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
-        <i class="fas fa-clock"></i>
-        <?php
+             </tbody>
+         </table>
+     </div>
+     <div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
+         <i class="fas fa-clock"></i>
+         <?php
                                         $DateAndTime = date('m-d-Y h:i:s a', time());
                                         echo "Actualizado $DateAndTime.";
                                     ?>
-    </div>
+     </div>
 
-</div>
-<script>
-$(document).ready(function() {
-    $(".toastPatient").toast('show');
-});
+ </div>
+ <script>
+        $(document).ready(function() {
+            $(".toastPatient").toast('show');
+        });
 </script>
