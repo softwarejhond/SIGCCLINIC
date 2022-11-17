@@ -24,16 +24,16 @@ $numeroFemale = mysqli_num_rows($sqlFemale);
         <div class="col-sm-4">
             <div class="card efecto alert-info">
                 <div class="card-body">
-                    <h5 class="card-title">Hombres</h5>
-                     <h1 class="card-text"><i class="fa fa-male"></i> <?php echo $totalMan?></h1>
+                    <h5 class="card-title">Espacio en construcción</h5>
+                     <h1 class="card-text"><i class="fa fa-construction"></i> <?php echo $totalMan?></h1>
                 </div>
             </div>
         </div>
         <div class="col-sm-4">
         <div class="card efecto alert-info">
                 <div class="card-body">
-                    <h5 class="card-title">Mujeres</h5>
-                     <h1 class="card-text"><i class="fa fa-female"></i> <?php echo $numeroFemale?></h1>
+                    <h5 class="card-title">Espacio en construcción</h5>
+                     <h1 class="card-text"><i class="fa fa-construction"></i> <?php echo $numeroFemale?></h1>
                 </div>
             </div>
         </div>
