@@ -1,5 +1,5 @@
 <div class="wrap">
-    <div class="widget">
+    <div class="widget alert-info">
         <div class="fecha font-weight-bold">
             <p id="diaSemana" class="diaSemana">Martes</p>
             <p id="dia" class="dia">27</p>
@@ -26,8 +26,6 @@
 .wrap {
     width: 100%;
     /*margin:auto;*/
-    background-image:url(images/footer.png);
-    color: #fff;
 }
 
 .widget {
