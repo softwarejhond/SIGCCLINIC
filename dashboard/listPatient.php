@@ -1,84 +1,47 @@
+<div class="card text-center">
+    <div class="card-header" style="background-image:url(images/footer.png); color:#fff">
+        <i class="fas fa-user-injured"></i> LISTA DE PACIENTES <i class="fas fa-user-injured"></i>
+    </div>
+    <div class="card-body">
 
-    <div class="container">
-        <h4 class="mt-5">Buscador avanzado con PHP & MySQL</h4>
-        <hr>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <form method="post">
+                    <div class="form-row align-items-center">
+                        <div class="col-auto">
+                            <label class="sr-only" for="inlineFormInput">Curso</label>
+                            <input required name="PalabraClave" type="text" class="form-control mb-2"
+                                id="inlineFormInput" placeholder="Ingrese palabra clave">
+                            <input name="buscar" type="hidden" class="form-control mb-2" id="inlineFormInput" value="v">
+                        </div>
 
-        <div class="row">
-            <div class="col-12 col-md-12">
-                <!-- Contenido -->
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-2">Buscar Ahora</button>
+                        </div>
+                    </div>
+                </form>
+            </li>
 
+        </ul>
 
+        <?php
+$buscar = $_POST["buscar"];
 
-                <ul class="list-group">
-                    <li class="list-group-item">
-                        <form method="post">
-                            <div class="form-row align-items-center">
-                                <div class="col-auto">
-                                    <label class="sr-only" for="inlineFormInput">Curso</label>
-                                    <input required name="PalabraClave" type="text" class="form-control mb-2"
-                                        id="inlineFormInput" placeholder="Ingrese palabra clave">
-                                    <input name="buscar" type="hidden" class="form-control mb-2" id="inlineFormInput"
-                                        value="v">
-                                </div>
-
-                                <div class="col-auto">
-                                    <button type="submit" class="btn btn-primary mb-2">Buscar Ahora</button>
-                                </div>
-                            </div>
-                        </form>
-                    </li>
-
-                </ul>
-
-
-                <?php
- 
-if(!empty($_POST))
-{
-      $aKeyword = explode(" ", $_POST['PalabraClave']);
-      $query = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$aKeyword%' ORDER BY nombre ASC");
-      
-     for($i = 1; $i < count($aKeyword); $i++) {
-        if(!empty($aKeyword[$i])) {
-            $query .= " OR descripcion like '%" . $aKeyword[$i] . "%'";
-        }
-      }
-     
-     $result = $db->query($query);
-     echo "<br>Has buscado la palabra clave:<b> ". $_POST['PalabraClave']."</b>";
-                     
-     if(mysqli_num_rows($result) > 0) {
-        $row_count=0;
-        echo "<br><br>Resultados encontrados: ";
-        echo "<br><table class='table table-striped'>";
-        While($row = $result->fetch_assoc()) {   
-            $row_count++;                         
-            echo "<tr><td>".$row_count." </td><td>". $row['numeroIdentificacion'] . "</td><td>". $row['nombre'] . "</td></tr>";
-        }
-        echo "</table>";
-	
-    }
-    else {
-        echo "<br>Resultados encontrados: Ninguno";
-		
-    }
-}
- 
+$buscarpaciente = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion='$buscar'");
+while ($pacienteEncontrado = mysqli_fetch_array($buscarpaciente)) {
+ echo '<p class="text-right" style="font-size:12px">'.$pacienteEncontrado['nombre'].'</p>';
+ }
 ?>
+    </div>
+    <div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
+        <i class="fas fa-clock"></i>
+        <?php
+                                        $DateAndTime = date('m-d-Y h:i:s a', time());
+                                        echo "Actualizado $DateAndTime.";
+                                    ?>
+    </div>
 
-
-
-
-                <!-- Fin Contenido -->
-            </div>
-        </div><!-- Fin row -->
-    </div><!-- Fin container -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script>
-    window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')
-    </script>
+</div>
 <script>
 $(document).ready(function() {
     $(".toastPatient").toast('show');
