@@ -31,7 +31,7 @@ if (mysqli_num_rows($sql) == 0) {
 } else {
     $no = 1;
     while ($row = mysqli_fetch_array($sql)) {
-        echo '
+        echo ' 
 
 						  <tr style="font-size:12px">
 						    <td>' . $no . '</td>
