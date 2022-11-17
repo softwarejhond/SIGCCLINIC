@@ -24,7 +24,7 @@
     min-width: 100%;
     background-color: var(--calendar-bg-color);
     color: var(--calendar-font-color);
-    margin: 5px auto;
+   
     box-sizing: border-box;
     overflow: hidden;
     font-weight: normal;
