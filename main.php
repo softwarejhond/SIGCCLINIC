@@ -41,39 +41,44 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
                         <?php //muy importante
                          include "txtBanner.php";
                         ?>
-                        <!--MENSAJES DE ELIMINAR EN CADA TABLA-->
-                        <?php include './dashboard/alertEvolucionDelete.php';?>
-                        <?php include './dashboard/alertHistoryDelete.php';?>
-                        <?php include './dashboard/alertPatientDelete.php';?>
+                        <div class="container">
+                            <!--MENSAJES DE ELIMINAR EN CADA TABLA-->
+                            <?php include './dashboard/alertEvolucionDelete.php';?>
+                            <?php include './dashboard/alertHistoryDelete.php';?>
+                            <?php include './dashboard/alertPatientDelete.php';?>
+                        </div>
                         </br>
 
                         <?php //muy importante
                          include "contadores/contadores.php";?>
                         </br>
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
-                                    aria-controls="home" aria-selected="true">Pacientes</a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                                    aria-controls="profile" aria-selected="false">Historias</a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
-                                    aria-controls="contact" aria-selected="false">Evoluciones</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <?php include './dashboard/listPatient.php';?>
-                            </div>
-                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                <?php include './dashboard/listHistor.php';?>
-                            </div>
-                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="container">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                        aria-controls="home" aria-selected="true">Pacientes</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                        aria-controls="profile" aria-selected="false">Historias</a>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                                        aria-controls="contact" aria-selected="false">Evoluciones</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel"
+                                    aria-labelledby="home-tab">
+                                    <?php include './dashboard/listPatient.php';?>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <?php include './dashboard/listHistor.php';?>
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
 
-                                <?php include './dashboard/listEvolution.php';?></div>
+                                    <?php include './dashboard/listEvolution.php';?></div>
+                            </div>
                         </div>
                         </br>
                     </div>
