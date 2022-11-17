@@ -9,7 +9,7 @@ $numero = mysqli_num_rows($sql);
             <div class="card efecto alert-info">
                 <div class="card-body">
                     <h5 class="card-title">Cantidad de Usuarios</h5>
-                    <h1 class="card-text"><?php echo $numero?></h1>
+                    <h1 class="card-text"><i class="fa fa-users"></i> <?php echo $numero?></h1>
                 </div>
             </div>
         </div>
