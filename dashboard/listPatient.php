@@ -27,7 +27,7 @@
         <?php
 $buscar = $_POST["buscar"];
 
-$buscarpaciente = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion='$buscar'");
+$buscarpaciente = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion LIKE %'$buscar'%");
 while ($pacienteEncontrado = mysqli_fetch_array($buscarpaciente)) {
  echo '<p class="text-right" style="font-size:12px">'.$pacienteEncontrado['nombre'].'</p>';
  }
