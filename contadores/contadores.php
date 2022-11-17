@@ -2,6 +2,9 @@
 require_once "conexion.php";
 $sql = mysqli_query($con,"SELECT * FROM patient");
 $numero = mysqli_num_rows($sql);
+
+$sqlMan = mysqli_query($con,"SELECT * FROM patient WHERE genero='Masculino'");
+$numeroMan = mysqli_num_rows($sqlMan);
     ?>
 <div class="container">
     <div class="row">
@@ -14,11 +17,10 @@ $numero = mysqli_num_rows($sql);
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="card efecto">
+            <div class="card efecto alert-info">
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">Hombres</h5>
+                     <h1 class="card-text"><i class="fa fa-male"></i> <?php echo $numeroMan?></h1>
                 </div>
             </div>
         </div>
