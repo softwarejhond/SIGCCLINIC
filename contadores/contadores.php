@@ -8,7 +8,7 @@ $numero = mysqli_num_rows($sql);
         <div class="col-sm-4">
             <div class="card efecto alert-info">
                 <div class="card-body">
-                    <h5 class="card-title">Cantidad de Usuarios</h5>
+                    <h5 class="card-title">Usuarios</h5>
                     <h1 class="card-text"><i class="fa fa-users"></i> <?php echo $numero?></h1>
                 </div>
             </div>
@@ -23,11 +23,9 @@ $numero = mysqli_num_rows($sql);
             </div>
         </div>
         <div class="col-sm-4">
-            <div class="card efecto">
+            <div class="card efecto alert-info">
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <?php   include "conexion.php";?>
                 </div>
             </div>
         </div>
