@@ -8,7 +8,7 @@
     --calendar-date-hover-color: #505050;
     --calendar-current-date-color: #fff;
     --calendar-today-color: #FF3B3E;
-    --calendar-today-innerborder-color: #000;
+    --calendar-today-innerborder-color: #fff;
     --calendar-nextprev-bg-color: #1a1f21;
 }
 
