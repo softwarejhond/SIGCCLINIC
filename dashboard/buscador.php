@@ -1,6 +1,6 @@
 <?php include("conexion.php");
 
-$buscardor=mysqli_query($con, "SELECT * FROM buscador_avanzado WHERE nombre LIKE LOWER('%".$_POST["buscar"]."%') OR tema LIKE LOWER ('%".$_POST["buscar"]."%') "); 
+$buscardor=mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion LIKE LOWER('%".$_POST["buscar"]."%')"); 
 $numero = mysqli_num_rows($buscardor); ?>
 
 
