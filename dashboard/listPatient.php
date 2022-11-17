@@ -29,7 +29,8 @@ if ($filter) {
 if (mysqli_num_rows($sql) == 0) {
     echo '<tr><td colspan="8">No hay datos.</td></tr>';
 } else {
-   $row = mysqli_fetch_assoc($sql);
+    $no = 1;
+    while ($row = mysqli_fetch_array($sql)) {
         echo ' 
 
 						  <tr style="font-size:12px">
@@ -49,9 +50,9 @@ if (mysqli_num_rows($sql) == 0) {
 
 
 						';
-       
+        $no++;
     }
-
+}
 ?>
              </tbody>
          </table>
