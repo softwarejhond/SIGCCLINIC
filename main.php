@@ -36,7 +36,7 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
         <h4 id="datos"></h4>
         <div class="container-fluid rounded">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 px-2 mt-1">
+                <div class="col-lg-8 col-md-12 col-sm-12 px-2 mt-1">
                     <div class="card">
                         <?php //muy importante
                          include "txtBanner.php";
@@ -77,6 +77,9 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
                         </div>
                         </br>
                     </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12 px-2 mt-1">
+                <?php include 'reloj.php';?>
                 </div>
             </div>
         </div>
