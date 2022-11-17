@@ -28,7 +28,7 @@
         $.ajax({
         data:parametros,
         type: 'POST',
-        url: 'buscador.php',
+        url: 'dashboard/buscador.php',
         success: function(data) {
         document.getElementById("datos_buscador").innerHTML = data;
         }
