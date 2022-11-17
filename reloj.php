@@ -1,21 +1,21 @@
 <div class="wrap alert-info">
     <div class="widget ">
         <div class="fecha font-weight-bold alert-info">
-            <p id="diaSemana" class="diaSemana">Martes</p>
-            <p id="dia" class="dia">27</p>
+            <p id="diaSemana" class="diaSemana alert-info">Martes</p>
+            <p id="dia" class="dia alert-info">27</p>
             <p>de </p>
-            <p id="mes" class="mes">Octubre</p>
+            <p id="mes" class="mes alert-info">Octubre</p>
             <p>del </p>
-            <p id="year" class="year">2015</p>
+            <p id="year" class="year alert-info">2015</p>
         </div>
         <div class="reloj">
-            <p id="horas" class="horas">11</p>
+            <p id="horas" class="horas alert-info">11</p>
             <p>:</p>
-            <p id="minutos" class="minutos">48</p>
+            <p id="minutos" class="minutos alert-info">48</p>
             <p>:</p>
             <div class="caja-segundos">
-                <p id="segundos" class="segundos">12</p>
-                <p id="ampm" class="ampm">AM</p>
+                <p id="segundos" class="segundos alert-info">12</p>
+                <p id="ampm" class="ampm alert-info">AM</p>
 
             </div>
         </div>
