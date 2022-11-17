@@ -1,4 +1,4 @@
-<div class="container">
+  <div class="container">
         <h4 class="mt-5">Buscador avanzado con PHP & MySQL</h4>
         <hr>
 
@@ -28,45 +28,6 @@
                     </li>
 
                 </ul>
-
-
-                <?php
- 
-if(!empty($_POST))
-{
-      $aKeyword = explode(" ", $_POST['PalabraClave']);
-      $query ="SELECT * FROM patient WHERE numeroIdentificacion like '%" . $buscar[0] . "%'";
-      
-     for($i = 1; $i < count($aKeyword); $i++) {
-        if(!empty($aKeyword[$i])) {
-            $query .= " OR descripcion like '%" . $aKeyword[$i] . "%'";
-        }
-      }
-     
-     $result = $db->query($query);
-     echo "<br>Has buscado la palabra clave:<b> ". $_POST['PalabraClave']."</b>";
-                     
-     if(mysqli_num_rows($result) > 0) {
-        $row_count=0;
-        echo "<br><br>Resultados encontrados: ";
-        echo "<br><table class='table table-striped'>";
-        While($row = $result->fetch_assoc()) {   
-            $row_count++;                         
-            echo "<tr><td>".$row_count." </td><td>". $row['lenguaje'] . "</td><td>". $row['descripcion'] . "</td></tr>";
-        }
-        echo "</table>";
-	
-    }
-    else {
-        echo "<br>Resultados encontrados: Ninguno";
-		
-    }
-}
- 
-?>
-
-
-
 
                 <!-- Fin Contenido -->
             </div>
@@ -101,7 +62,7 @@ $usaurio = htmlspecialchars($_SESSION["numeroIdentificacion"]);
 if ($filter) {
     $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$buscar%' ORDER BY nombre ASC");
 } else {
-    $sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion like '%$buscar%' ORDER BY nombre ASC");
+    echo '<tr><td colspan="8">Esperando paciente para buscar.</td></tr>';
 }
 if (mysqli_num_rows($sql) == 0) {
     echo '<tr><td colspan="8">No hay datos.</td></tr>';
