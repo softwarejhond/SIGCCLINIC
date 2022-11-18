@@ -14,10 +14,10 @@
                         <div class="row">
                             <div class="col-md-7">
 
-                                <form action="" method="POST">
+                                <form action="" method="GET">
                                     <div class="input-group mb-3">
-                                        <input type="text" name="search" required value="<?php if(isset($_POST['search'])){echo $_POST['search']; } ?>" class="form-control" placeholder="Search data">
-                                        <button type="submit" name="search" class="btn btn-primary">Search</button>
+                                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
+                                        <button type="submit" class="btn btn-primary">Search</button>
                                     </div>
                                 </form>
 
@@ -41,7 +41,7 @@
                             </thead>
                             <tbody>
                                 <?php 
-                                    if(isset($_POST['search']))
+                                    if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
                                         $query = "SELECT * FROM patient WHERE numeroIdentificacion LIKE '%$filtervalues%' ";
