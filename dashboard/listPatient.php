@@ -69,7 +69,7 @@ if(isset($_POST['save']))
 		    	 		?>
                     <tr>
                         <td><?php echo $key+1;?></td>
-                        <td><?php echo $value['name'];?></td>
+                        <td><?php echo $value['nombre'];?></td>
                         <td><?php echo $value['phone_no'];?></td>
                         <td><?php echo $value['age'];?></td>
                         <td><?php echo $value['department'];?></td>
