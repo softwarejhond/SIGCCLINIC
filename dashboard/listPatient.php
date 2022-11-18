@@ -29,7 +29,7 @@
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
-                                        $query = "SELECT * FROM patient WHERE numeroIdentificacion LIKE '%$filtervalues%' ";
+                                        $query = "SELECT * FROM patient WHERE numeroIdentificacion ='$filtervalues' ";
                                         $query_run = mysqli_query($con, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)
@@ -42,7 +42,7 @@
                                 <td><?= $items['numeroIdentificacion']; ?></td>
                                 <td><?= $items['nombre']; ?></td>
                                 <td><?= $items['apellidos']; ?></td>
-                                <td><a href="historiaClinica.php?nik='<?= $filtervalues?>'"
+                                <td><a href="historiaClinica.php?nik='<?= $items['numeroIdentificacion']?>'"
                                         title="Realizar historia clínica" class="btn btn-outline-success btn-sm"><span
                                             class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
 
