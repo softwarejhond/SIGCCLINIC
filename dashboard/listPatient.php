@@ -5,10 +5,10 @@
     <div class="card-body">
         <form action="" method="GET">
             <div class="input-group mb-3">
-                <input type="text" name="search" required
-                    value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control"
-                    placeholder="Search data">
-                <button type="submit" class="btn btn-primary">Search</button>
+                <input type="number" name="search" required
+                    value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control text-center"
+                    placeholder="BUSCAR PACIENTE">
+                <button type="submit" class="btn btn-primary">BUSCAR</button>
             </div>
         </form>
         <div class="col-md-12">
@@ -19,7 +19,7 @@
                             <tr>
                                 <th>IDENTIFICACIÓN</th>
                                 <th>NOMBRE</th>
-                                <th>APELLIDOS</th>
+                                <th>TELÉFONO</th>
                                 <th>ACCIONES</th>
                             </tr>
                         </thead>
@@ -37,10 +37,8 @@
                                             {
                                                 echo '
                                                 <tr style="font-size:12px">
-                                                  <td>' . $no . '</td>
                                                   <td>' . $items['numeroIdentificacion'] . '</td>
-                                                  <td>' . $items['nombre'] . '</td>
-                                                  <td>' . $items['apellidos'] . '</td>
+                                                  <td>' . $items['nombre'] . ' ' . $items['apellidos'] . '</td>
                                                   <td>' . $items['telefonoCelular'] . '</td>
                                                   <td>' . $items['doctorAsignado'] . '</td>
                       
