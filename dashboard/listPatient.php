@@ -33,7 +33,6 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>IDENTIFICACIÓN</th>
                                     <th>NOMBRE</th>
                                     <th>APELLIDOS</th>
@@ -54,7 +53,6 @@
                                             {
                                                 ?>
                                                 <tr>
-                                                    <td><?= $items['id']; ?></td>
                                                     <td><?= $items['numeroIdentificacion']; ?></td>
                                                     <td><?= $items['nombre']; ?></td>
                                                     <td><?= $items['apellidos']; ?></td>
