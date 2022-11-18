@@ -57,6 +57,11 @@
                                                     <td><?= $items['numeroIdentificacion']; ?></td>
                                                     <td><?= $items['nombre']; ?></td>
                                                     <td><?= $items['apellidos']; ?></td>
+                                                    <td><a href="historiaClinica.php?nik=' . $items['numeroIdentificacion'] . '"title="Realizar historia clínica" class="btn btn-outline-success btn-sm" "><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
+                            <td><a href="evolucionesClinicas.php?nik=' . $items['numeroIdentificacion'] . '" title="Realizar valoración clínica" class="btn btn-outline-info btn-sm"><span class="fa fa-feather-alt" aria-hidden="true"></span></a></td>
+                            <td><a href="upd_paciente.php?nik=' . $items['numeroIdentificacion'] . '" title="Editar paciente" class="btn btn-outline-warning btn-sm"><span class="fa fa-edit" aria-hidden="true"></span></a></td>
+                            <td><a href="main.php?aksi=delete&nik=' . $items['numeroIdentificacion'] . '" title="Eliminar paciente" onclick=" return confirm(\'Esta seguro de borrar al paciente ' . $row['nombre'] . " " . $row['apellidos'] . '?\')" class="btn btn-outline-danger btn-sm"><span class="fa fa-trash" aria-hidden="true"></span></a></td>
+
                                                 </tr>
                                                 <?php
                                             }
@@ -90,11 +95,11 @@
                      <th class="w-25">Apellidos</th>
                      <th class="w-10">Celular</th>
                      <th class="w-50">Doctor</th>
-                     <th class="w-50"> </th>
-                     <th class="w-50"> </th>
-                     <th class="w-50"> </th>
-                     <th class="w-50"> </th>
-                 </tr>
+                     <td><a href="historiaClinica.php?nik=' . $row['numeroIdentificacion'] . '"title="Realizar historia clínica" class="btn btn-outline-success btn-sm" "><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
+                            <td><a href="evolucionesClinicas.php?nik=' . $row['numeroIdentificacion'] . '" title="Realizar valoración clínica" class="btn btn-outline-info btn-sm"><span class="fa fa-feather-alt" aria-hidden="true"></span></a></td>
+                            <td><a href="upd_paciente.php?nik=' . $row['numeroIdentificacion'] . '" title="Editar paciente" class="btn btn-outline-warning btn-sm"><span class="fa fa-edit" aria-hidden="true"></span></a></td>
+                            <td><a href="main.php?aksi=delete&nik=' . $row['numeroIdentificacion'] . '" title="Eliminar paciente" onclick="return confirm(\'Esta seguro de borrar al paciente ' . $row['nombre'] . " " . $row['apellidos'] . '?\')" class="btn btn-outline-danger btn-sm"><span class="fa fa-trash" aria-hidden="true"></span></a></td>
+
              </thead>
              <tbody>
                  <?php
