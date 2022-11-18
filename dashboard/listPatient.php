@@ -3,7 +3,7 @@
         <i class="fas fa-user-injured"></i> LISTA DE PACIENTES <i class="fas fa-user-injured"></i>
     </div>
     <div class="card-body">
-        <form action="" method="GET">
+        <form method="GET">
             <div class="input-group mb-3">
                 <input type="number" name="search" required
                     value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control"
