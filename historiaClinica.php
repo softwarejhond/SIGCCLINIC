@@ -46,7 +46,7 @@ include("head.php");
 			// escaping, additionally removing everything that could be (html/javascript-) code
 			$nik = mysqli_real_escape_string($con,(strip_tags($_GET["nik"],ENT_QUOTES)));
 			
-			$sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion LIKE '%$nik%'");
+			$sql = mysqli_query($con, "SELECT * FROM patient WHERE numeroIdentificacion='$nik'");
 			if(mysqli_num_rows($sql) == 0){
 				header("Location: index.php");
 			}else{
