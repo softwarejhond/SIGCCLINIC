@@ -42,7 +42,7 @@
                                 <td><?= $items['numeroIdentificacion']; ?></td>
                                 <td><?= $items['nombre']; ?></td>
                                 <td><?= $items['apellidos']; ?></td>
-                                <td><a href="historiaClinica.php?nik='<? $items['numeroIdentificacion']?>'"
+                                <td><a href="historiaClinica.php?nik='<?= $filtervalues?>'"
                                         title="Realizar historia clínica" class="btn btn-outline-success btn-sm"><span
                                             class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
 
