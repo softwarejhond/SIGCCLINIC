@@ -34,9 +34,9 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email</th>
+                                    <th>IDENTIFICACIÓN</th>
+                                    <th>NOMBRE</th>
+                                    <th>ACCIONES</th>
                                 </tr>
                             </thead>
                             <tbody>
