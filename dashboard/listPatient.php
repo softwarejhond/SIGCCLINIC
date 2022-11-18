@@ -16,8 +16,8 @@
 
                                 <form action="" method="GET">
                                     <div class="input-group mb-3">
-                                        <input type="text" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Search data">
-                                        <button type="submit" class="btn btn-primary">Search</button>
+                                        <input type="number" name="search" required value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control" placeholder="Buscar paciente">
+                                        <button type="submit" class="btn btn-primary">Buscar</button>
                                     </div>
                                 </form>
 
@@ -58,10 +58,7 @@
                                                     <td><?= $items['nombre']; ?></td>
                                                     <td><?= $items['apellidos']; ?></td>
                                                     <td><a href="historiaClinica.php?nik='<?= $items['numeroIdentificacion']?>'" title="Realizar historia clínica" class="btn btn-outline-success btn-sm"><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
-                            <td><a href="evolucionesClinicas.php?nik=' . $items['numeroIdentificacion'] . '" title="Realizar valoración clínica" class="btn btn-outline-info btn-sm"><span class="fa fa-feather-alt" aria-hidden="true"></span></a></td>
-                            <td><a href="upd_paciente.php?nik=' . $items['numeroIdentificacion'] . '" title="Editar paciente" class="btn btn-outline-warning btn-sm"><span class="fa fa-edit" aria-hidden="true"></span></a></td>
-                            <td><a href="main.php?aksi=delete&nik=' . $items['numeroIdentificacion'] . '" title="Eliminar paciente" onclick=" return confirm(\'Esta seguro de borrar al paciente ' . $row['nombre'] . " " . $row['apellidos'] . '?\')" class="btn btn-outline-danger btn-sm"><span class="fa fa-trash" aria-hidden="true"></span></a></td>
-
+                           
                                                 </tr>
                                                 <?php
                                             }
