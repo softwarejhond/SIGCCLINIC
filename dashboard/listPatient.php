@@ -43,7 +43,7 @@
                                 <?php 
                                     if(isset($_POST['search']))
                                     {
-                                        $filtervalues = $_POST['search'];
+                                        $filtervalues = $_GET['search'];
                                         $query = "SELECT * FROM patient WHERE numeroIdentificacion LIKE '%$filtervalues%' ";
                                         $query_run = mysqli_query($con, $query);
 
