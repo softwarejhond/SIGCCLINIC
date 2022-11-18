@@ -36,6 +36,7 @@
                                     <th>ID</th>
                                     <th>IDENTIFICACIÓN</th>
                                     <th>NOMBRE</th>
+                                    <th>APELLIDOS</th>
                                     <th>ACCIONES</th>
                                 </tr>
                             </thead>
