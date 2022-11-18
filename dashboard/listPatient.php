@@ -83,8 +83,6 @@
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </body>
          <table id="myTable" class=" table table-hover table-bordered table-lg table-responsive">
              <thead class="thead-dark">
