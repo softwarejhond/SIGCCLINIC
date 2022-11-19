@@ -247,9 +247,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <?php include('calendar.php');
                         ?>
                     </div>
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include('soporte.php');?>
-                    </div>
                 </div>
             </div>
         </div>
