@@ -18,7 +18,6 @@ session_start();
   include "conexion.php";
   ?>
 <div class="card" style=" height:150px">
-   
         <div class="card-img-overlay ">
             <img src="vista.php?id='<?php echo'9'?>'" alt='Perfil' class="rounded mr-1"
                style="float:left; margin:3px; width: 80px" />

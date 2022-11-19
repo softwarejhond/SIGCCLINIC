@@ -81,7 +81,7 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
                         </br>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12 col-sm-12 px-2 mt-1">
+                <div class="col-lg-3 col-md-none col-sm-none px-none mt-1">
                     <div class="card">
                     <?php //muy importante
                          include "txtBanner.php";
