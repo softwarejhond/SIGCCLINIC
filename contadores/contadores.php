@@ -32,7 +32,7 @@ $numeroFemale = mysqli_num_rows($sqlFemale);
         <div class="col-sm-4">
         <div class="card efecto alert-info">
                 <div class="card-body">
-                <?php //muy importante
+                    <?php //muy importante
                          include "txtBanner.php";
                         ?>
                 </div>
