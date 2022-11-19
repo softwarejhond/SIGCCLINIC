@@ -73,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: main.php");
                         } else{
                             // Display an error message if password is not valid
-                            echo '     <div class="toast" style="position: absolute; top: 0; right: 0;" data-delay="4000">
+                            echo ' <div class="toast" style="position: relative; top: 100; right: 0;" data-delay="4000">
                             <div class="toast-header ">
                                 <strong class="mr-auto"><i class="fa fa-bell" aria-hidden="true"
                                         style=color:green></i> Notificación</strong>
