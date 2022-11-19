@@ -34,14 +34,14 @@
                                                        <div class="card-body text-left">
                                                          <h2 class="card-title"><b>'.$items['nombre'] . ' ' . $items['apellidos'] .'</b></h2>
                                                          <h3 class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</h3>
+                                                         <h3 class="card-text">Teléfono: '.$items['telefonoCelular'].'</h3>
                                                          </br>
                                                          <h5>Acciones a realizar</h5>
-                                                         <h3 class="card-text">Teléfono: '.$items['telefonoCelular'].'</h3>
                                                          <td><a href="historiaClinica.php?nik=' . $items['numeroIdentificacion'] . '"title="Realizar historia clínica" class="btn btn-outline-success btn-lg"><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
                                                          <td><a href="evolucionesClinicas.php?nik=' . $items['numeroIdentificacion'] . '" title="Realizar valoración clínica" class="btn btn-outline-info btn-lg"><span class="fa fa-feather-alt" aria-hidden="true"></span></a></td>
                                                          <td><a href="upd_paciente.php?nik=' . $items['numeroIdentificacion'] . '" title="Editar paciente" class="btn btn-outline-warning btn-lg"><span class="fa fa-edit" aria-hidden="true"></span></a></td>
                                                          <td><a href="main.php?aksi=delete&nik=' . $items['numeroIdentificacion'] . '" title="Eliminar paciente" onclick="return confirm(\'Esta seguro de borrar al paciente ' . $items['nombre'] . " " . $items['apellidos'] . '?\')" class="btn btn-outline-danger btn-lg"><span class="fa fa-trash" aria-hidden="true"></span></a></td>
-                             
+                                                         </br>
                                                          <p class="card-text"><small class="text-muted">Fecha de ingreso: '.$items['telefonoCelular'].'</small></p>
                                                        </div>
                                                     </div>
