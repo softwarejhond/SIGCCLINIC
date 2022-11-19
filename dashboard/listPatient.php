@@ -12,7 +12,6 @@
             </div>
         </form>
         <div class="col-md-12">
-            <div class="card mt-4">
 
                 <?php 
                                     if(isset($_GET['search']))
@@ -60,7 +59,6 @@
                                     }
                                 ?>
 
-            </div>
         </div>
         </body>
     </div>
