@@ -62,7 +62,11 @@
                                         {
                                             ?>
             <tr>
-                <td colspan="4">Paciente no encontrado</td>
+                <td colspan="4">
+                <div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>    
+                Paciente no encontrado</td>
             </tr>
             <?php
                                         }
