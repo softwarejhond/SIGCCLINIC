@@ -13,8 +13,8 @@
         </form>
         <div class="col-md-12">
             <div class="card mt-4">
-                  
-                            <?php 
+
+                <?php 
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
@@ -27,42 +27,39 @@
                                             {
                                                 echo '
                                                 <div class="card mb-3" style="max-width: 100%;">
-                                                <div class="row no-gutters">
-                                                  <div class="col-md-4">
-                                                    <img src="..." alt="...">
-                                                  </div>
-                                                  <div class="col-md-8">
-                                                    <div class="card-body text-left">
-                                                      <h5 class="card-title"><b>'.$items['nombre'] . ' ' . $items['apellidos'] .'</b></h5>
-                                                      <p class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</p>
-                                                      <p class="card-text">Teléfono: '.$items['telefonoCelular'].'</p>
-                                                      <p class="card-text"><small class="text-muted">Fecha de ingreso: '.$items['telefonoCelular'].'</small></p>
+                                                  <div class="row no-gutters">
+                                                     <div class="col-md-4">
+                                                        <img src="..." alt="...">
+                                                     </div>
+                                                     <div class="col-md-8">
+                                                       <div class="card-body text-left">
+                                                         <h5 class="card-title"><b>'.$items['nombre'] . ' ' . $items['apellidos'] .'</b></h5>
+                                                         <p class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</p>
+                                                         <p class="card-text">Teléfono: '.$items['telefonoCelular'].'</p>
+                                                         <p class="card-text"><small class="text-muted">Fecha de ingreso: '.$items['telefonoCelular'].'</small></p>
+                                                       </div>
                                                     </div>
-                                                  </div>
-                                                  <div class="card-footer">
-                                                  <small class="text-muted">Last updated 3 mins ago</small>
+                                               
                                                 </div>
-                                                </div>
-                                              </div>
                       
                                               ';
                                                 ?>
 
-                            <?php
+                <?php
                                             }
                                         }
                                         else
                                         {
                                             ?>
-                            <tr>
-                                <td colspan="4">Paciente no encontrado</td>
-                            </tr>
-                            <?php
+                <tr>
+                    <td colspan="4">Paciente no encontrado</td>
+                </tr>
+                <?php
                                         }
                                     }
                                 ?>
-                   
-                </div>
+
+            </div>
         </div>
         </body>
     </div>
@@ -95,4 +92,3 @@ $(document).ready(function() {
                                                 </tr>
 
 -->
-                      
