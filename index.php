@@ -73,7 +73,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: main.php");
                         } else{
                             // Display an error message if password is not valid
-                            echo '<div class="alert alert-danger alert-dismissable text-center" style="text-aling:center"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><b>Contraseña incorrecta</b></div>';
+                            echo '     <div class="toast" style="position: absolute; top: 0; right: 0;" data-delay="4000">
+                            <div class="toast-header ">
+                                <strong class="mr-auto"><i class="fa fa-bell" aria-hidden="true"
+                                        style=color:green></i> Notificación</strong>
+                              
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="toast-body alert-danger">
+                                <h5> <b>Contraseña incorrecta, intente nuevamente/b></h5>
+                           
+                            </div>
+                        </div>';
                
                         }
                     }
@@ -425,5 +439,9 @@ viewPassword.addEventListener('click', (e) => {
     }
 })
 </script>
-
+<script>
+$(document).ready(function() {
+    $(".toast").toast('show');
+});
+</script>
 </html>
