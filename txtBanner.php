@@ -21,7 +21,7 @@ session_start();
    
         <div class="card-img-overlay ">
             <img src="vista.php?id='<?php echo'9'?>'" alt='Perfil' class="rounded mr-1"
-               style="float:left; margin:3px; width:100px" />
+               style="float:left; margin:3px; width: 80px" />
             <?php
                                $usaurio= htmlspecialchars($_SESSION["username"]);
                                $query = mysqli_query($con,"SELECT * FROM users WHERE username like '%$usaurio%'");
