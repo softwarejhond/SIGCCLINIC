@@ -17,9 +17,9 @@ session_start();
 // Include config file
   include "conexion.php";
   ?>
-<div class="card bg-dark text-white">
+<div class="card bg-dark text-white" style=" height:180px">
     <div class="container">
-        <div class="card-img-overlay " style="height:180px">
+        <div class="card-img-overlay ">
             <img src="vista.php?id='<?php echo'9'?>'" alt='Perfil' class="rounded mr-1"
                style="float:left; padding:10px; width:100px" />
             <?php
