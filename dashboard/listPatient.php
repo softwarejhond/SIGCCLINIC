@@ -8,7 +8,7 @@
                 <input type="number" name="search" required
                     value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control text-center"
                     placeholder="BUSCAR PACIENTE">
-                <button type="submit" class="btn btn-primary">BUSCAR</button>
+                <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-search"></i></button>
             </div>
         </form>
         <div class="col-md-12">
@@ -36,7 +36,7 @@
                                                          <h3 class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</h3>
                                                          <h3 class="card-text">Teléfono: '.$items['telefonoCelular'].'</h3>
                                                          </br>
-                                                         <button class="btn btn-outline-danger btn-lg" title=""><b><i class="fa fa-dna"></i> '.$items['rh'] . '</b></button>
+                                                         <button class="btn btn-outline-danger btn-lg" title="Tipo de sangre"><b><i class="fa fa-dna"></i> '.$items['rh'] . '</b></button>
                                                          <button class="btn btn-outline-danger btn-lg" title=""><b><i class="fa fa-dna"></i> '.$items['rh'] . '</b></button>
                                                          </br>
                                                          <h5>Acciones a realizar</h5>
