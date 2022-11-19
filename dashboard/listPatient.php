@@ -13,17 +13,8 @@
         </form>
         <div class="col-md-12">
             <div class="card mt-4">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>IDENTIFICACIÓN</th>
-                                <th>NOMBRE</th>
-                                <th>TELÉFONO</th>
-                                <th>ACCIONES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php 
+
+                <?php 
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
@@ -54,32 +45,31 @@
                                               ';
                                                 ?>
 
-                            <?php
+                <?php
                                             }
                                         }
                                         else
                                         {
                                             ?>
-                            <tr>
-                                <td colspan="4">Paciente no encontrado</td>
-                            </tr>
-                            <?php
+                <tr>
+                    <td colspan="4">Paciente no encontrado</td>
+                </tr>
+                <?php
                                         }
                                     }
                                 ?>
-                        </tbody>
-                    </table>
-                </div>
+            </div>
         </div>
-        </body>
     </div>
-    <div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
-        <i class="fas fa-clock"></i>
-        <?php
+    </body>
+</div>
+<div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
+    <i class="fas fa-clock"></i>
+    <?php
                                         $DateAndTime = date('m-d-Y h:i:s a', time());
                                         echo "Actualizado $DateAndTime.";
                                     ?>
-    </div>
+</div>
 
 </div>
 <script>
@@ -102,4 +92,3 @@ $(document).ready(function() {
                                                 </tr>
 
 -->
-                      
