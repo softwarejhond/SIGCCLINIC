@@ -25,7 +25,7 @@
                                             foreach($query_run as $items)
                                             {
                                                 echo '
-                                                <div class="card alert-info" style="max-width: 100%; border:0;">
+                                                <div class="card alert-info" style="width: 100%; border:0;">
                                                   <div class="row no-gutters">
                                                      <div class="col-md-4 text-left">
                                                         <img src="images/doc.png" alt="avatar" style="width:100%"> 
