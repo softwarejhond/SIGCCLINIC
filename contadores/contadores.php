@@ -32,9 +32,9 @@ $numeroFemale = mysqli_num_rows($sqlFemale);
         <div class="col-sm-4">
         <div class="card efecto alert-info">
                 <div class="card-body">
-                    <?php //muy importante
-                         include "txtBanner.php";
-                        ?>
+                <h5 class="card-title">Espacio en construcción</h5>
+                     <h1 class="card-text"><i class="fas fa-exclamation-triangle"></i> 0</h1>
+                   
                 </div>
             </div>
         </div>
