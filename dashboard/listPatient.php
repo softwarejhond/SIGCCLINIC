@@ -13,8 +13,8 @@
         </form>
         <div class="col-md-12">
             <div class="card mt-4">
-
-                <?php 
+                  
+                            <?php 
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
@@ -45,31 +45,31 @@
                                               ';
                                                 ?>
 
-                <?php
+                            <?php
                                             }
                                         }
                                         else
                                         {
                                             ?>
-                <tr>
-                    <td colspan="4">Paciente no encontrado</td>
-                </tr>
-                <?php
+                            <tr>
+                                <td colspan="4">Paciente no encontrado</td>
+                            </tr>
+                            <?php
                                         }
                                     }
                                 ?>
-            </div>
+                   
+                </div>
         </div>
+        </body>
     </div>
-    </body>
-</div>
-<div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
-    <i class="fas fa-clock"></i>
-    <?php
+    <div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
+        <i class="fas fa-clock"></i>
+        <?php
                                         $DateAndTime = date('m-d-Y h:i:s a', time());
                                         echo "Actualizado $DateAndTime.";
                                     ?>
-</div>
+    </div>
 
 </div>
 <script>
@@ -92,3 +92,4 @@ $(document).ready(function() {
                                                 </tr>
 
 -->
+                      
