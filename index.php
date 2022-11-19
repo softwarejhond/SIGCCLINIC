@@ -73,21 +73,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             header("location: main.php");
                         } else{
                             // Display an error message if password is not valid
-                            echo ' <div class="toast" style="position: absolute; top: 0; right: 0; z-index:10;" data-delay="4000">
-                            <div class="toast-header ">
-                                <strong class="mr-auto"><i class="fa fa-bell" aria-hidden="true"
-                                        style=color:green></i> Notificación</strong>
-                              
-                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"
-                                    aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="toast-body alert-danger">
-                                <h5> <b>Contraseña incorrecta, intente nuevamente/b></h5>
-                           
-                            </div>
-                        </div>';
+                            echo '<div class="alert alert-danger alert-dismissable text-center" style="text-aling:center"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><b>Contraseña incorrecta</b></div>';
                
                         }
                     }
@@ -125,35 +111,33 @@ include 'head.php';
                     <div>
                         <label style="color:#fff">Usuario ID:</label>
                         <div class="input-group-prepend">
-                            <div class="input-group-text form-control-lg"><i class="fa fa-user"
-                                    style="cursor:pointer ;"></i></div>
-
-                            <input type="number" name="username" placeholder="1234567890"
-                                class="text-input text-center form-control-lg" />
+                                <div class="input-group-text form-control-lg"><i class="fa fa-user" style="cursor:pointer ;"></i></div>
+                           
+                        <input type="number" name="username" placeholder="1234567890"
+                            class="text-input text-center form-control-lg" />
                         </div>
                     </div>
                     <div>
-                        <label style="color:#fff">Contraseña:</label>
-                        <div class="input-group-prepend">
-                            <div class="input-group-text form-control-lg" id="viewPassword"><i class="fa fa-eye"
-                                    style="cursor:pointer ;"></i></div>
-
-                            <input type="password" name="password" class="text-input text-center form-control-lg w-100"
-                                id="password" placeholder="Contraseña">
-                        </div>
-
+                    <label style="color:#fff">Contraseña:</label>
+                            <div class="input-group-prepend">
+                                <div class="input-group-text form-control-lg" id="viewPassword"><i class="fa fa-eye" style="cursor:pointer ;"></i></div>
+                           
+                            <input type="password" name="password" class="text-input text-center form-control-lg w-100" id="password"
+                                placeholder="Contraseña"> 
+                                </div>
+                       
                     </div>
                     <button type="submit" class="primary-btn btn-lg"><b>Iniciar sesión</b></button>
                 </form>
             </div>
             <footer id="main-footer">
-                <p class="text-center login__forgot"> <?php
+            <p class="text-center login__forgot"> <?php 
                               $queryCompany = mysqli_query($con,"SELECT nombre FROM company");
                               while ($empresaLog = mysqli_fetch_array($queryCompany)) {
                                echo '<label  class="card-text">'.$empresaLog['nombre'].'</label>';
         
                                }
-                               ?></p>
+                               ?></p><!--se otorga el copy a la empresa-->
                 <p class="text-center login__forgot">SIGC &copy; Copyright <?php echo date("Y");?></p>
                 <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">Made by Agencia de
                     Desarrollo
@@ -204,7 +188,7 @@ h6 {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: linear-gradient(rgba(2, 52, 81, 0.8), rgba(8, 160, 206, 0.8)), url(images/fondo.png);
+    background-image:linear-gradient(rgba(2, 52, 81, 0.8), rgba(8, 160, 206,0.8)), url(images/fondo.png);
     box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
     background-size: cover;
 }
@@ -433,7 +417,7 @@ $(document).ready(function() {
 });
 </script>
 <script>
-//view pass
+    //view pass
 let password = document.getElementById('password');
 let viewPassword = document.getElementById('viewPassword');
 let click = false;
@@ -447,11 +431,6 @@ viewPassword.addEventListener('click', (e) => {
         click = false
     }
 })
-</script>
-<script>
-$(document).ready(function() {
-    $(".toast").toast('show');
-});
 </script>
 
 </html>
