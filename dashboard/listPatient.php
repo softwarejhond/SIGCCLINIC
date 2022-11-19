@@ -25,7 +25,7 @@
                                             foreach($query_run as $items)
                                             {
                                                 echo '
-                                                <div class="card mb-3" style="max-width: 100%; background-image:url(images/infocard.png); background-size: cover;  border:0;">
+                                                <div class="card mb-3 alert-info" style="max-width: 100%; border:0;">
                                                   <div class="row no-gutters">
                                                      <div class="col-md-4 text-left">
                                                         <img src="images/doc.png" alt="avatar" style="width:100%"> 
@@ -37,7 +37,7 @@
                                                          <h3 class="card-text">Teléfono: '.$items['telefonoCelular'].'</h3>
                                                          </br>
                                                          <button class="btn btn-outline-danger btn-lg" title="Tipo de sangre"><b><i class="fa fa-dna"></i> '.$items['rh'] . '</b></button>
-                                                         <button class="btn btn-outline-info btn-lg" title=""><b><i class="fa fa-calendar"></i> '.$items['fechaNacimiento'] . '</b></button>
+                                                         <button class="btn btn-outline-info btn-lg" title="Fecha de nacimiento"><b><i class="fa fa-calendar"></i> '.$items['fechaNacimiento'] . '</b></button>
                                                          </br>
                                                          <h5>Acciones a realizar</h5>
                                                          <td><a href="historiaClinica.php?nik=' . $items['numeroIdentificacion'] . '"title="Realizar historia clínica" class="btn btn-outline-success btn-lg"><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
