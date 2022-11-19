@@ -17,7 +17,7 @@
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
-                                        $query = "SELECT * FROM patient WHERE numeroIdentificacion LIKE '%$filtervalues%' ";
+                                        $query = "SELECT * FROM patient WHERE numeroIdentificacion LIKE '%$filtervalues%' LIMIT 1 ";
                                         $query_run = mysqli_query($con, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)
