@@ -25,7 +25,7 @@ session_start();
                                $usaurio= htmlspecialchars($_SESSION["username"]);
                                $query = mysqli_query($con,"SELECT * FROM users WHERE username like '%$usaurio%'");
                                while ($userLog = mysqli_fetch_array($query)) {
-                                echo '<h6  class="card-text px-2 mt-1" style="color:#000;text-transform: uppercase;">'.$userLog['nombre'].' <div class="spinner-grow text-success" role="status"><span class="sr-only spinner-grow-sm">Loading...</span></div></h6>';  
+                                echo '<h6  class="card-text px-2 mt-1" style="color:#000;text-transform: uppercase;">'.$userLog['nombre'].' <div class="spinner-grow-sm text-success" role="status"><span class="sr-only">Loading...</span></div></h6>';  
                                 echo '<h6  class="card-text px-2" style="color:#000;text-transform: uppercase;">'.$userLog['profesion'].'</h6>';
                                 echo '<h6  class="card-text px-2" style="color:#000;text-transform: uppercase;">'.$userLog['dependencia'].'</h6>';
                                     
