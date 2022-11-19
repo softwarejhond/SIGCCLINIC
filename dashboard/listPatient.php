@@ -25,7 +25,7 @@
                                             foreach($query_run as $items)
                                             {
                                                 echo '
-                                                <div class="card mb-3 alert-info" style="max-width: 100%; border:0;">
+                                                <div class="card alert-info" style="max-width: 100%; border:0;">
                                                   <div class="row no-gutters">
                                                      <div class="col-md-4 text-left">
                                                         <img src="images/doc.png" alt="avatar" style="width:100%"> 
@@ -36,8 +36,8 @@
                                                          <h3 class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</h3>
                                                          <h3 class="card-text">Teléfono: '.$items['telefonoCelular'].'</h3>
                                                          </br>
-                                                         <button class="btn btn-outline-danger btn-lg" data-toggle="tooltip" data-placement="top" data-html="true" title="Tipo de sangre"><b><i class="fa fa-dna"></i> '.$items['rh'] . '</b></button>
-                                                         <button class="btn btn-outline-info btn-lg" data-toggle="tooltip" data-placement="top" data-html="true" title="Fecha de nacimiento"><b><i class="fa fa-calendar"></i> '.$items['fechaNacimiento'] . '</b></button>
+                                                         <button class="btn btn-outline-danger btn-lg" title="Tipo de sangre"><b><i class="fa fa-dna"></i> '.$items['rh'] . '</b></button>
+                                                         <button class="btn btn-outline-info btn-lg" title="Fecha de nacimiento"><b><i class="fa fa-calendar"></i> '.$items['fechaNacimiento'] . '</b></button>
                                                          </br>
                                                          <h5>Acciones a realizar</h5>
                                                          <td><a href="historiaClinica.php?nik=' . $items['numeroIdentificacion'] . '"title="Realizar historia clínica" class="btn btn-outline-success btn-lg"><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
@@ -63,10 +63,11 @@
                                             ?>
             <tr>
                 <td colspan="4">
-                <div class="spinner-border" role="status">
-  <span class="sr-only">Loading...</span>
-</div>    
-                Paciente no encontrado</td>
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    Paciente no encontrado
+                </td>
             </tr>
             <?php
                                         }
