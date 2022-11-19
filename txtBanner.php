@@ -18,7 +18,6 @@ session_start();
   include "conexion.php";
   ?>
 <div class="card bg-dark text-white">
-    <div class="container">
         <div class="card-img-overlay ">
             <img src="vista.php?id='<?php echo'9'?>'" alt='Perfil' class="rounded mr-1"
                style="float:left; padding:10px; width:100px" />
@@ -37,5 +36,4 @@ session_start();
                 <?php echo htmlspecialchars($_SESSION["username"]); ?></h6>
            </h6>
         </div>
-    </div>
 </div>
