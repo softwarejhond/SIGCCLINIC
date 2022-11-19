@@ -36,8 +36,8 @@
                                                          <h3 class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</h3>
                                                          <h3 class="card-text">Teléfono: '.$items['telefonoCelular'].'</h3>
                                                          </br>
-                                                         <button class="btn btn-outline-danger btn-lg" title="Tipo de sangre"><b><i class="fa fa-dna"></i> '.$items['rh'] . '</b></button>
-                                                         <button class="btn btn-outline-info btn-lg" title="Fecha de nacimiento"><b><i class="fa fa-calendar"></i> '.$items['fechaNacimiento'] . '</b></button>
+                                                         <button class="btn btn-outline-danger btn-lg" data-toggle="tooltip" data-placement="top" title="Tipo de sangre"><b><i class="fa fa-dna"></i> '.$items['rh'] . '</b></button>
+                                                         <button class="btn btn-outline-info btn-lg" data-toggle="tooltip" data-placement="top" title="Fecha de nacimiento"><b><i class="fa fa-calendar"></i> '.$items['fechaNacimiento'] . '</b></button>
                                                          </br>
                                                          <h5>Acciones a realizar</h5>
                                                          <td><a href="historiaClinica.php?nik=' . $items['numeroIdentificacion'] . '"title="Realizar historia clínica" class="btn btn-outline-success btn-lg"><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
