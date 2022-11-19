@@ -36,9 +36,6 @@ require_once "conexion.php";
                 <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
                     <div class="card border-info shadow p-3 mb-5 bg-white rounded">
 
-                        <?php //muy importante
-                    include("txtBanner.php");
-                    ?>
                         <div class="container">
                             <br>
                             <?php
@@ -238,6 +235,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 px-2 mt-1">
+                <div class="card shadow p-2 mb-1 bg-white rounded">
+                        <?php  include("txtBanner.php");
+                        ?>
+                    </div>
                     <div class="card shadow p-2 mb-1 bg-white rounded">
                         <?php include('reloj.php');
                         ?>
