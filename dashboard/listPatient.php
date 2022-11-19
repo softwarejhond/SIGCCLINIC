@@ -33,8 +33,8 @@
                                                      <div class="col-md-8">
                                                        <div class="card-body text-left">
                                                          <h2 class="card-title"><b>'.$items['nombre'] . ' ' . $items['apellidos'] .'</b></h2>
-                                                         <h3 class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</h3>
-                                                         <h3 class="card-text">Teléfono: '.$items['telefonoCelular'].'</h3>
+                                                         <h4 class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</h4>
+                                                         <h4 class="card-text">Teléfono: '.$items['telefonoCelular'].'</h4>
                                                          </br>
                                                          <button class="btn btn-outline-danger btn-lg" title="Tipo de sangre"><b><i class="fa fa-dna"></i> '.$items['rh'] . '</b></button>
                                                          <button class="btn btn-outline-info btn-lg" title="Fecha de nacimiento"><b><i class="fa fa-calendar"></i> '.$items['fechaNacimiento'] . '</b></button>
