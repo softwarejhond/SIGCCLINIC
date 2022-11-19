@@ -4,7 +4,7 @@
     </div>
     <div class="card-body">
         <form action="" method="GET">
-            <div class="input-group mb-3">
+            <div class="input-group input-group-lg mb-3">
                 <input type="number" name="search" required
                     value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control text-center"
                     placeholder="BUSCAR PACIENTE">
