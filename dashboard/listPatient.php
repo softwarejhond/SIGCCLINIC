@@ -34,6 +34,8 @@
                                                        <div class="card-body text-left">
                                                          <h2 class="card-title"><b>'.$items['nombre'] . ' ' . $items['apellidos'] .'</b></h2>
                                                          <h3 class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</h3>
+                                                         </br>
+                                                         <h5>Acciones a realizar</h5>
                                                          <h3 class="card-text">Teléfono: '.$items['telefonoCelular'].'</h3>
                                                          <td><a href="historiaClinica.php?nik=' . $items['numeroIdentificacion'] . '"title="Realizar historia clínica" class="btn btn-outline-success btn-lg"><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
                                                          <td><a href="evolucionesClinicas.php?nik=' . $items['numeroIdentificacion'] . '" title="Realizar valoración clínica" class="btn btn-outline-info btn-lg"><span class="fa fa-feather-alt" aria-hidden="true"></span></a></td>
