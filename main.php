@@ -38,9 +38,7 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
             <div class="row">
                 <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
                     <div class="card">
-                        <?php //muy importante
-                         include "txtBanner.php";
-                        ?>
+                      
                         <div class="container">
                             <!--MENSAJES DE ELIMINAR EN CADA TABLA-->
                             <?php include './dashboard/alertEvolucionDelete.php';?>
