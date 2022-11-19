@@ -34,9 +34,7 @@ include("head.php");
             <div class="row">
                 <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
                     <div class="card">
-                        <?php //muy importante
-                    include("txtBanner.php");
-                    ?>
+
                         <div class="col col-md-12 md">
 
                             <div class="card-body">
@@ -86,7 +84,7 @@ include("head.php");
                                             <a class="nav-link active" id="nav-home-tab" data-toggle="tab"
                                                 href="#nav-paciente" role="tab" aria-controls="nav-home"
                                                 aria-selected="true">Información paciente</a>
-                                                <a class="nav-link" id="nav-home-tab" data-toggle="tab"
+                                            <a class="nav-link" id="nav-home-tab" data-toggle="tab"
                                                 href="#nav-evolution" role="tab" aria-controls="nav-home"
                                                 aria-selected="true">Evolución nueva</a>
 
@@ -95,7 +93,7 @@ include("head.php");
                                     <div class="tab-content" id="nav-tabContent">
                                         <div class="tab-pane fade show active" id="nav-paciente" role="tabpanel"
                                             aria-labelledby="nav-paciente-tab">
-                                        <?php include('./evolutions/infoUserEvolution.php');?>
+                                            <?php include('./evolutions/infoUserEvolution.php');?>
                                         </div>
 
                                         <div class="tab-pane fade show" id="nav-evolution" role="tabpanel"
@@ -116,14 +114,15 @@ include("head.php");
             </div>
             <div class="col-lg-3 col-md-12 col-sm-12 px-2 mt-1">
                 <div class="card shadow p-2 mb-1 bg-white rounded">
+                    <?php  include("txtBanner.php");
+                        ?>
+                </div>
+                <div class="card shadow p-2 mb-1 bg-white rounded">
                     <?php include('reloj.php');?>
                 </div>
                 <div class="card shadow p-2 mb-1 bg-white rounded">
                     <?php include('calendar.php');?>
                 </div>
-                <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include('soporte.php');?>
-                    </div>
             </div>
         </div>
         </div>

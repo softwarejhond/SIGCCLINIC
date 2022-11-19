@@ -56,8 +56,7 @@ require_once "conexion.php";
             <div class="row" style="margin-top:5px">
                 <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
                     <div class="card border-info shadow p-3 mb-5 bg-white rounded">
-                        <?php //muy importante
-                    include("txtBanner.php");?>
+                   
                         <div class="card-body">
 
                             <!--ACTUALIZAR DATOS USUARIO-->
@@ -90,7 +89,7 @@ require_once "conexion.php";
                                         <?php
                               $queryCompany = mysqli_query($con,"SELECT nombre,nit FROM company");
                               while ($empresaLog = mysqli_fetch_array($queryCompany)) {
-                               echo '<p class="text-right" style="font-size:12px">'.$empresaLog[nombre].'</p>';
+                               echo '<p class="text-right" style="font-size:12px">'.$empresaLog['nombre'].'</p>';
                                }
                                ?>
                                         <div class="row">
@@ -106,8 +105,8 @@ require_once "conexion.php";
                               
                               $queryCompany = mysqli_query($con,"SELECT nombre,nit FROM company");
                               while ($empresaLog = mysqli_fetch_array($queryCompany)) {
-                               echo '<h3  class="card-text">'.$empresaLog[nombre].'</h3>';
-                               echo '<h4  class="card-text">NIT: '.$empresaLog[nit].'</h4>';
+                               echo '<h3  class="card-text">'.$empresaLog['nombre'].'</h3>';
+                               echo '<h4  class="card-text">NIT: '.$empresaLog['nit'].'</h4>';
                                }
                                ?>
                                     </div>
@@ -606,9 +605,9 @@ require_once "conexion.php";
                                $usaurio= htmlspecialchars($_SESSION["username"]);
                                $query = mysqli_query($con,"SELECT * FROM users WHERE username like '%$usaurio%'");
                                while ($userLog = mysqli_fetch_array($query)) {
-                                echo '<h5  class="card-text px-2 mt-1">'.$userLog[nombre].'</h5>';  
-                                echo '<h5  class="card-text px-2">CC '.$userLog[username].'</h5>';
-                                echo '<h5  class="card-text px-2">'.$userLog[profesion].'</h5>';
+                                echo '<h5  class="card-text px-2 mt-1">'.$userLog['nombre'].'</h5>';  
+                                echo '<h5  class="card-text px-2">CC '.$userLog['username'].'</h5>';
+                                echo '<h5  class="card-text px-2">'.$userLog['profesion'].'</h5>';
                                     
                               }
                                 ?>
@@ -618,8 +617,8 @@ require_once "conexion.php";
                               
                               $queryCompany = mysqli_query($con,"SELECT * FROM company");
                               while ($empresaLog = mysqli_fetch_array($queryCompany)) {
-                               echo '<p  class="text-center">'.$empresaLog[nombre].'</p>';
-                               echo '<p class="text-center">NIT: '.$empresaLog[nit].' Teléfono: '.$empresaLog[telefono].'</p>';
+                               echo '<p  class="text-center">'.$empresaLog['nombre'].'</p>';
+                               echo '<p class="text-center">NIT: '.$empresaLog['nit'].' Teléfono: '.$empresaLog['telefono'].'</p>';
                               echo '<p class="text-center"><b>SIGC © Copyright '.date("Y").'</b></p>';
                              }
                                ?>
@@ -658,7 +657,7 @@ require_once "conexion.php";
                                             <?php
                               $queryCompany = mysqli_query($con,"SELECT * FROM company");
                               while ($empresaLog = mysqli_fetch_array($queryCompany)) {
-                               echo '<p class="text-right" style="font-size:12px">'.$empresaLog[direccion].'</p>';
+                               echo '<p class="text-right" style="font-size:12px">'.$empresaLog['direccion'].'</p>';
                                }
                                ?>
                                 </div>
@@ -674,14 +673,15 @@ require_once "conexion.php";
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 px-2 mt-1">
+                <div class="card shadow p-2 mb-1 bg-white rounded">
+                        <?php  include("txtBanner.php");
+                        ?>
+                    </div>
                     <div class="card shadow p-2 mb-1 bg-white rounded">
                         <?php include('reloj.php');?>
                     </div>
                     <div class="card shadow p-2 mb-1 bg-white rounded">
                         <?php include('calendar.php');?>
-                    </div>
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include('soporte.php');?>
                     </div>
                 </div>
             </div>

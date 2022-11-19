@@ -36,9 +36,7 @@ require_once 'conexion.php';
             <div class='row'>
                 <div class='col-lg-9 col-md-12 col-sm-12 px-2 mt-1'>
                     <div class='card border-info shadow p-3 mb-5 bg-white rounded'>
-                        <?php //muy importante
-                         include( 'txtBanner.php' );
-?>
+                      
                         <div class='container'>
                             <br>
                             <h2>Actualizar información del paciente</h2>
@@ -310,7 +308,7 @@ if ( isset( $_POST['updPaciente'] ) ) {
 $usaurio = htmlspecialchars( $_SESSION['username'] );
 $query = mysqli_query( $con, "SELECT nombre FROM users WHERE username like '%$usaurio%' AND dependencia='Especialista'" );
 while ( $userLog = mysqli_fetch_array( $query ) ) {
-    echo ' <option value="'.$userLog[nombre].'">'.$userLog[nombre].'</option>';
+    echo ' <option value="'.$userLog['nombre'].'">'.$userLog['nombre'].'</option>';
 }
 ?>
                                             </select>
@@ -339,6 +337,10 @@ while ( $docLog = mysqli_fetch_array( $queryId ) ) {
             </div>
 
             <div class='col-lg-3 col-md-12 col-sm-12 px-2 mt-1'>
+            <div class="card shadow p-2 mb-1 bg-white rounded">
+                        <?php  include("txtBanner.php");
+                        ?>
+                    </div>
                 <div class='card shadow p-2 mb-1 bg-white rounded'>
                     <?php include( 'reloj.php' );?>
                 </div>

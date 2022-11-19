@@ -35,9 +35,7 @@ include("head.php");
             <div class="row">
                 <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
                     <div class="card">
-                        <?php //muy importante
-                    include("txtBanner.php");
-                    ?>
+                    
                         <div class="col col-md-12 md">
 
                             <div class="card-body">
@@ -307,16 +305,17 @@ include("head.php");
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 px-2 mt-1">
-                   
+                <div class="card shadow p-2 mb-1 bg-white rounded">
+                        <?php  include("txtBanner.php");
+                        ?>
+                    </div>
                     <div class="card shadow p-2 mb-1 bg-white rounded">
                         <?php include('reloj.php');?>
                     </div>
                     <div class="card shadow p-2 mb-1 bg-white rounded">
                         <?php include('calendar.php');?>
                     </div>
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include('soporte.php');?>
-                    </div>
+                  
 
                 </div>
             </div>
