@@ -13,7 +13,7 @@
         </form>
         <div class="col-md-12">
 
-                <?php 
+            <?php 
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
@@ -35,6 +35,11 @@
                                                          <h5 class="card-title"><b>'.$items['nombre'] . ' ' . $items['apellidos'] .'</b></h5>
                                                          <p class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</p>
                                                          <p class="card-text">Teléfono: '.$items['telefonoCelular'].'</p>
+                                                         <td><a href="historiaClinica.php?nik=' . $items['numeroIdentificacion'] . '"title="Realizar historia clínica" class="btn btn-outline-success btn-lg"><span class="fa fa-laptop-medical" aria-hidden="true"></span></a></td>
+                                                         <td><a href="evolucionesClinicas.php?nik=' . $items['numeroIdentificacion'] . '" title="Realizar valoración clínica" class="btn btn-outline-info btn-lg"><span class="fa fa-feather-alt" aria-hidden="true"></span></a></td>
+                                                         <td><a href="upd_paciente.php?nik=' . $items['numeroIdentificacion'] . '" title="Editar paciente" class="btn btn-outline-warning btn-lg"><span class="fa fa-edit" aria-hidden="true"></span></a></td>
+                                                         <td><a href="main.php?aksi=delete&nik=' . $items['numeroIdentificacion'] . '" title="Eliminar paciente" onclick="return confirm(\'Esta seguro de borrar al paciente ' . $items['nombre'] . " " . $items['apellidos'] . '?\')" class="btn btn-outline-danger btn-lg"><span class="fa fa-trash" aria-hidden="true"></span></a></td>
+                             
                                                          <p class="card-text"><small class="text-muted">Fecha de ingreso: '.$items['telefonoCelular'].'</small></p>
                                                        </div>
                                                     </div>
@@ -45,16 +50,16 @@
                                               ';
                                                 ?>
 
-                <?php
+            <?php
                                             }
                                         }
                                         else
                                         {
                                             ?>
-                <tr>
-                    <td colspan="4">Paciente no encontrado</td>
-                </tr>
-                <?php
+            <tr>
+                <td colspan="4">Paciente no encontrado</td>
+            </tr>
+            <?php
                                         }
                                     }
                                 ?>
