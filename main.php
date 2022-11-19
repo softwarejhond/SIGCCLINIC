@@ -87,6 +87,7 @@ $materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padr
                          include "txtBanner.php";
                         ?>
                     </div>
+</br>
                     <div class="card">
                         <?php include 'reloj.php';?>
                     </div>
