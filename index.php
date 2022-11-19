@@ -4,8 +4,6 @@
 <?php
 include 'head.php';
 ?>
-
-<body>
 <?php
 // Initialize the session
 session_start();
@@ -116,6 +114,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($con);
 }
 ?>
+<body>
+    
     <div id="wrapper">
         <div id="left">
             <div id="signin">
