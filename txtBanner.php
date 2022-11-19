@@ -19,7 +19,7 @@ session_start();
   ?>
 <div class="card" style=" height:150px">
         <div class="card-img-overlay ">
-            <img src="vista.php?id='<?php echo'9'?>'" alt='Perfil' class="rounded col-lg-3 col-sm-12 px-2 mt-1"
+            <img src="vista.php?id='<?php echo'9'?>'" alt='Perfil' class="rounded w-100"
                style="float:left; margin:3px; width: 80px" />
             <?php
                                $usaurio= htmlspecialchars($_SESSION["username"]);
