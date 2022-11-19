@@ -29,7 +29,7 @@
                                                 <div class="card mb-3" style="max-width: 100%; background-image:url(images/infocard.png); background-size: cover;">
                                                   <div class="row no-gutters">
                                                      <div class="col-md-4">
-                                                        <img src="images/dov.png" alt="avatar" width:100%>
+                                                        <img src="images/doc.png" alt="avatar" width:100%>
                                                      </div>
                                                      <div class="col-md-8">
                                                        <div class="card-body text-left">
