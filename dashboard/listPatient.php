@@ -1,6 +1,6 @@
 <div class="card text-center">
     <div class="card-header" style="background-image:url(images/footer.png); color:#fff">
-        <i class="fas fa-user-injured"></i> LISTA DE PACIENTES <i class="fas fa-user-injured"></i>
+        <i class="fas fa-user-injured"></i> BUSQUEDA DE PACIENTES <i class="fas fa-user-injured"></i>
     </div>
     <div class="card-body">
         <form action="" method="GET">
@@ -60,7 +60,7 @@
                                         {
                                             ?>
                             <tr>
-                                <td colspan="4">No Record Found</td>
+                                <td colspan="4">Paciente no encontrado</td>
                             </tr>
                             <?php
                                         }
