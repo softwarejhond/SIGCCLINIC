@@ -38,10 +38,10 @@
                                                       <p class="card-text">Teléfono: '.$items['telefonoCelular'].'</p>
                                                       <p class="card-text"><small class="text-muted">Fecha de ingreso: '.$items['telefonoCelular'].'</small></p>
                                                     </div>
-                                                    <div class="card-footer">
-                                                    <small class="text-muted">Last updated 3 mins ago</small>
                                                   </div>
-                                                  </div>
+                                                  <div class="card-footer">
+                                                  <small class="text-muted">Last updated 3 mins ago</small>
+                                                </div>
                                                 </div>
                                               </div>
                       
