@@ -13,7 +13,7 @@ $numeroFemale = mysqli_num_rows($sqlFemale);
     ?>
 <div class="container">
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <div class="card efecto alert-info">
                 <div class="card-body">
                     <h5 class="card-title">Usuarios</h5>
@@ -21,7 +21,7 @@ $numeroFemale = mysqli_num_rows($sqlFemale);
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-3">
             <div class="card efecto alert-info">
                 <div class="card-body">
                     <h5 class="card-title">Espacio en construcción</h5>
@@ -29,7 +29,7 @@ $numeroFemale = mysqli_num_rows($sqlFemale);
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
         <div class="card efecto alert-info">
                 <div class="card-body">
                 <?php //muy importante
