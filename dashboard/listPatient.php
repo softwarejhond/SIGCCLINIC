@@ -41,10 +41,10 @@
                                                     <img src="..." alt="...">
                                                   </div>
                                                   <div class="col-md-8">
-                                                    <div class="card-body">
-                                                      <h5 class="card-title">'.$items['nombre'] . ' ' . $items['apellidos'] .'</h5>
-                                                      <p class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'<</p>
-                                                      <p class="card-text">Teléfono: '.$items['telefonoCelular'].'<</p>
+                                                    <div class="card-body text-left">
+                                                      <h5 class="card-title"><b>'.$items['nombre'] . ' ' . $items['apellidos'] .'</b></h5>
+                                                      <p class="card-text">Documento de identificación: '.$items['numeroIdentificacion'].'</p>
+                                                      <p class="card-text">Teléfono: '.$items['telefonoCelular'].'</p>
                                                       <p class="card-text"><small class="text-muted">Fecha de ingreso: '.$items['telefonoCelular'].'</small></p>
                                                     </div>
                                                   </div>
