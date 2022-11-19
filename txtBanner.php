@@ -17,7 +17,7 @@ session_start();
 // Include config file
   include "conexion.php";
   ?>
-<div class="card" style=" height:200px">
+<div class="card" style=" height:180px">
     <div class="container">
         <div class="card-img-overlay ">
             <img src="vista.php?id='<?php echo'9'?>'" alt='Perfil' class="rounded mr-1"
@@ -26,9 +26,9 @@ session_start();
                                $usaurio= htmlspecialchars($_SESSION["username"]);
                                $query = mysqli_query($con,"SELECT * FROM users WHERE username like '%$usaurio%'");
                                while ($userLog = mysqli_fetch_array($query)) {
-                                echo '<h6  class="card-text px-2 mt-1" style="color:#000;text-transform: uppercase;">'.$userLog['nombre'].'</h6>';  
-                                echo '<h6  class="card-text px-2" style="color:#000;text-transform: uppercase;">'.$userLog['profesion'].'</h6>';
-                                echo '<h6  class="card-text px-2" style="color:#000;text-transform: uppercase;">'.$userLog['dependencia'].'</h6>';
+                                echo '<h5  class="card-text px-2 mt-1" style="color:#000;text-transform: uppercase;">'.$userLog['nombre'].'</h5>';  
+                                echo '<h5  class="card-text px-2" style="color:#000;text-transform: uppercase;">'.$userLog['profesion'].'</h5>';
+                                echo '<h5  class="card-text px-2" style="color:#000;text-transform: uppercase;">'.$userLog['dependencia'].'</h5>';
                                     
                               }
                                 ?>
