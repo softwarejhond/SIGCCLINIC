@@ -118,7 +118,7 @@ include 'head.php';
                         </div>
                     </div>
                     <div>
-                    <label style="color:#fff">Contraseñaa:</label>
+                    <label style="color:#fff">Contraseña:</label>
                             <div class="input-group-prepend">
                                 <div class="input-group-text form-control-lg" id="viewPassword"><i class="fa fa-eye" style="cursor:pointer ;"></i></div>
                            
