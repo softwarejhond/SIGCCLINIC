@@ -88,7 +88,6 @@ while ($userLog = mysqli_fetch_array($query)) {
                     <div class="card">
                         <?php include 'reloj.php';?>
                     </div>
-                    </br>
                     <div class="card">
                         <?php include 'calendar.php';?>
                     </div>
