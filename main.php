@@ -36,7 +36,7 @@ while ($userLog = mysqli_fetch_array($query)) {
         <div class="container-fluid rounded">
             <div class="row">
                 <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
-                    <div class="card">
+                    <div class="card shadow p-2 mb-1 bg-white rounded">
                       
                         <div class="container">
                             <!--MENSAJES DE ELIMINAR EN CADA TABLA-->
