@@ -94,274 +94,343 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     mysqli_close($con);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <?php include('head.php');?>
-
-</head>
+<?php
+include 'head.php';
+?>
 
 <body>
-    <div class="login-container container">
-        <div class="form-login">
-            <ul class="login-nav text-center">
-                <li class="login-nav__item active">
-                    <a href="index.php">Iniciar sesión</a>
-                </li>
-            </ul>
-            <div style="text-align:center;">
-                <img src="images/logoo.png" alt="logo" width="150px" style='text-aling:center;'>
-
+    <div id="wrapper">
+        <div id="left">
+            <div id="signin">
+                <div class="logo">
+                    <img src="images/logoo.png" alt="logo" width="130px" style='text-aling:center;'>
+                </div>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <div>
+                        <label style="color:#fff">Usuario ID:</label>
+                        <div class="input-group-prepend">
+                                <div class="input-group-text form-control-lg"><i class="fa fa-user" style="cursor:pointer ;"></i></div>
+                           
+                        <input type="number" name="username" placeholder="1234567890"
+                            class="text-input text-center form-control-lg" />
+                        </div>
+                    </div>
+                    <div>
+                    <label style="color:#fff">Contraseña:</label>
+                            <div class="input-group-prepend">
+                                <div class="input-group-text form-control-lg" id="viewPassword"><i class="fa fa-eye" style="cursor:pointer ;"></i></div>
+                           
+                            <input type="password" name="password" class="text-input text-center form-control-lg w-100" id="password"
+                                placeholder="Contraseña"> 
+                                </div>
+                       
+                    </div>
+                    <button type="submit" class="primary-btn btn-lg"><b>Iniciar sesión</b></button>
+                </form>
             </div>
-            <br>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <div class="form-group <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
-                    <label style="color:#fff">Usuario</label>
-                    <input type="number" name="username" class="form-control text-center" placeholder="1234567890" value="<?php echo $username; ?>">
-                    <span class="help-block"><?php echo $username_err; ?></span>
-                </div>
-                <div class="form-group <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
-                    <label style="color:#fff">Contraseña</label>
-                    <input type="password" name="password" placeholder="*******" class="form-control text-center">
-                    <span class="help-block"><?php echo $password_err; ?></span>
-                </div>
-                <div class="form-group">
-                    <input type="submit" class="btn btn-success w-100" value="Ingresar">
-                </div>
-            </form>
+            <footer id="main-footer">
+            <p class="text-center login__forgot"> <?php 
+                              $queryCompany = mysqli_query($con,"SELECT nombre FROM company");
+                              while ($empresaLog = mysqli_fetch_array($queryCompany)) {
+                               echo '<label  class="card-text">'.$empresaLog['nombre'].'</label>';
+        
+                               }
+                               ?></p><!--se otorga el copy a la empresa-->
+                <p class="text-center login__forgot">SIGC &copy; Copyright <?php echo date("Y");?></p>
+                <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">Made by Agencia de
+                    Desarrollo
+                    Eagle Software</a>
+            </footer>
         </div>
-        <br>
-        <p class="text-center login__forgot">SIGC &copy; Copyright <?php echo date("Y");?></p>
-        <a href="https://agenciaeaglesoftware.com/" target="_blank" class="login__forgot">Made by Agencia de Desarrollo
-            Eagle Software</a>
-        <br>
-        <br>
+        <div id="right">
+            <div id="showcase">
+                <div class="showcase-content">
+
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <style>
-	
-body{background-size:cover;}
-.content {width:200px; margin:auto; border-radius:20px;height:400px;background:#333}
-.content p{color:white;font-size:20px;padding:40px;margin:auto;text-align:center;}
-.imageCycle1{
-    background:url(images/fond.png);
-    background-repeat:no-repeat;
-    background-size:cover;
-    -webkit-background-size: cover;
-    -moz-background-size:cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fond.png',sizingMethod='scale')";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+
+* {
+    box-sizing: border-box;
 }
-.imageCycle2{
-    background:url(images/back.png);
-    background-repeat:no-repeat;
-    background-size:cover;
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image:linear-gradient(rgba(2, 52, 81, 0.8), rgba(8, 160, 206,0.8)), url(images/fondo.png);
+    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
+    background-size: cover;
+}
+
+
+#right {
+    flex: 1;
+}
+
+/* Sign In */
+#signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 1rem;
+}
+
+#signin form {
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+#signin .logo {
+    margin-bottom: 8vh;
+}
+
+#signin .logo img {
+    width: 300px;
+}
+
+#signin label {
+    font-size: 0.9rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+
+#signin .text-input {
+    margin-bottom: 1.3rem;
+    width: 100%;
+    border-radius: 2px;
+    background: #181818;
+    border: 1px solid #555;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    line-height: 1.3rem;
+}
+
+#signin .primary-btn {
+    width: 100%;
+}
+
+#signin .secondary-btn,
+.or,
+.links {
+    width: 60%;
+}
+
+#signin .links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#signin .or {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+
+
+#signin .or span {
+    color: #fff;
+    padding: 0 0.8rem;
+}
+
+/* Showcase */
+#showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.imageCycle1 {
+    background: url(images/fondo1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     -webkit-background-size: cover;
-    -moz-background-size:cover;
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale');
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fondo1.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fondo2.png',sizingMethod='scale')";
+}
+
+.imageCycle2 {
+    background: url(images/fondo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/fondo2.png', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/back.png',sizingMethod='scale')";
 }
 
 
-
-* {
-    box-sizing: border-box;
-    transition: .25s all ease;
-}
-
-.help-block {
-    color: #ffffff;
-}
-
-.login-container {
-    display: block;
-    position: relative;
-    z-index: 0;
-    margin: 1rem auto 0;
-    padding: 5rem 4rem 0 4rem;
+#showcase .showcase-text {
+    font-size: 3rem;
     width: 100%;
-    max-width: 525px;
-    background-image: url(images/fondo.png);
-    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.85);
-    background-size: cover;
-	border-radius: 40px;
-
+    color: #F9DA5A;
+    margin-bottom: 1.5rem;
 }
 
-.login-container:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: radial-gradient(ellipse at left bottom, rgba(1, 184, 253) 0%, rgba(38, 20, 72, .9) 59%, rgba(1, 184, 253) 100%);
-    box-shadow: 0 -20px 150px -20px rgba(0, 0, 0, 0.5);
-	border-radius: 40px;
+#showcase .secondary-btn {
+    width: 60%;
+    margin: auto;
 }
 
-.form-login {
-    position: relative;
-    z-index: 1;
-    padding-bottom: 4.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.login-nav {
-    position: relative;
-    padding: 0;
-    margin: 0 0 3em 1rem;
-}
-
-.login-nav__item {
-    list-style: none;
-    display: inline-block;
-}
-
-.login-nav__item+.login-nav__item {
-    margin-left: 2.25rem;
-}
-
-.login-nav__item a {
-    position: relative;
-    color: rgba(255, 255, 255, 0.5);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1.25rem;
-    padding-bottom: .5rem;
-    transition: .20s all ease;
-}
-
-.login-nav__item.active a,
-.login-nav__item a:hover {
-    color: #ffffff;
-    transition: .15s all ease;
-}
-
-.login-nav__item a:after {
-    content: '';
-    display: inline-block;
-    height: 10px;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    right: 100%;
-    bottom: -1px;
-    left: 0;
-    border-radius: 50%;
-    transition: .15s all ease;
-}
-
-.login-nav__item a:hover:after,
-.login-nav__item.active a:after {
-    background-color: rgb(17, 97, 237);
-    height: 2px;
-    right: 0;
-    bottom: 2px;
-    border-radius: 0;
-    transition: .20s all ease;
-}
-
-.login__label {
-    display: block;
-    padding-left: 1rem;
-}
-
-.login__label,
-.login__label--checkbox {
-    color: rgba(255, 255, 255, 0.5);
-    text-transform: uppercase;
-    font-size: .75rem;
-    margin-bottom: 1rem;
-}
-
-.login__label--checkbox {
-    display: inline-block;
-    position: relative;
-    padding-left: 1.5rem;
-    margin-top: 2rem;
-    margin-left: 1rem;
-    color: #ffffff;
-    font-size: .75rem;
-    text-transform: inherit;
-}
-
-.login__input {
-    color: white;
-    font-size: 1.15rem;
-    width: 100%;
-    padding: .5rem 1rem;
-    border: 2px solid transparent;
-    outline: none;
-    border-radius: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.25);
-    letter-spacing: 1px;
-}
-
-.login__input:hover,
-.login__input:focus {
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    background-color: transparent;
-}
-
-.login__input+.login__label {
-    margin-top: 1.5rem;
-}
-
-.login__input--checkbox {
-    position: absolute;
-    top: .1rem;
-    left: 0;
-    margin: 0;
-}
-
-.login__submit {
-    color: #ffffff;
-    font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 1rem;
-    padding: .75rem;
-    border-radius: 2rem;
-    display: block;
-    width: 100%;
-    background-color: rgba(17, 97, 237, .75);
-    border: none;
-    cursor: pointer;
-}
-
-.login__submit:hover {
-    background-color: rgba(17, 97, 237, 1);
-}
-
-.login__forgot {
-    display: block;
-    margin-top: 1rem;
+/* Footer */
+#main-footer {
+    color: #fff;
     text-align: center;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: .75rem;
+    font-size: 0.8rem;
+    max-width: 80%;
+    padding-top: 5rem;
+}
+
+#main-footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Button */
+.primary-btn {
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    font-weight: 500;
+    background: #F9DA5A;
+    color: #000000;
     text-decoration: none;
-    position: relative;
-    z-index: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.primary-btn:hover {
+    background-color: #F9DA5A;
+}
+
+.secondary-btn {
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 1px solid #F9DA5A;
+    border-radius: 2px;
+    font-weight: 500;
+    background: none;
+    color: #F9DA5A;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.secondary-btn:hover {
+    border-color: #F9DA5A;
+    color: #F9DA5A;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+    #left {
+        flex: 4;
+    }
+
+    #right {
+        flex: 6;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+
+    #right {
+        display: none;
+    }
+
+    #left {
+        justify-content: start;
+        margin-top: 4vh;
+    }
+
+    #signin .logo {
+        margin-bottom: 2vh;
+    }
+
+    #signin .text-input {
+        margin-bottom: 0.7rem;
+    }
+
+    #main-footer {
+        padding-top: 1rem;
+    }
 }
 </style>
 <script>
-	//funcion para imagenes aleatorias
-$(document).ready(function(){
-    var classCycle=['imageCycle1','imageCycle2'];
+//funcion para imagenes aleatorias
+$(document).ready(function() {
+    var classCycle = ['imageCycle1', 'imageCycle2'];
 
     var randomNumber = Math.floor(Math.random() * classCycle.length);
     var classToAdd = classCycle[randomNumber];
-    
+
     $('body').addClass(classToAdd);
 
 });
+</script>
+<script>
+    //view pass
+let password = document.getElementById('password');
+let viewPassword = document.getElementById('viewPassword');
+let click = false;
+
+viewPassword.addEventListener('click', (e) => {
+    if (!click) {
+        password.type = 'text'
+        click = true
+    } else if (click) {
+        password.type = 'password'
+        click = false
+    }
+})
 </script>
 
 </html>
