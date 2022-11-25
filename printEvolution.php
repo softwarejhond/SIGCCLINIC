@@ -225,8 +225,19 @@ require_once "conexion.php";
                                                 <br>
                                                 <img src="vistaFirmaHistoria.php?id='<?php echo '9'?>'" alt='Perfil'
                                                     class="rounded p-1" width="300px" />
+                                              <br>
+                                              <?php
+                               $usaurio= htmlspecialchars($_SESSION["username"]);
+                               $query = mysqli_query($con,"SELECT * FROM users WHERE username like '%$usaurio%'");
+                               while ($userLog = mysqli_fetch_array($query)) {
+                                echo '<h5  class="card-text px-2 mt-1">'.$userLog['nombre'].'</h5>';  
+                                echo '<h5  class="card-text px-2">CC '.$userLog['username'].'</h5>';
+                                echo '<h5  class="card-text px-2">'.$userLog['profesion'].'</h5>';
+                                    
+                              }
+                                ?>
                                             </div>
-
+                                            
                                             <?php
                               
                               $queryCompany = mysqli_query($con,"SELECT * FROM company");
