@@ -85,10 +85,10 @@ while ($userLog = mysqli_fetch_array($query)) {
                         <?php  include("txtBanner.php");
                         ?>
                     </div>
-                    <div class="card">
+                    <div class="card shadow p-2 mb-1 bg-white rounded">
                         <?php include 'reloj.php';?>
                     </div>
-                    <div class="card">
+                    <div class="card shadow p-2 mb-1 bg-white rounded">
                         <?php include 'calendar.php';?>
                     </div>
                 </div>
