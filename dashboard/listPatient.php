@@ -1,5 +1,5 @@
 <div class="card text-center">
-    <div class="card-header" style="background-image:url(images/footer.png); color:#fff">
+    <div class="card-header" style=" background-color: #123960; color:#ffffff">
         <i class="fas fa-user-injured"></i> BUSQUEDA DE PACIENTES <i class="fas fa-user-injured"></i>
     </div>
     <div class="card-body">
@@ -7,8 +7,8 @@
             <div class="input-group input-group-lg mb-3">
                 <input type="number" name="search" required
                     value="<?php if(isset($_GET['search'])){echo $_GET['search']; } ?>" class="form-control text-center"
-                    placeholder="BUSCAR PACIENTE">
-                <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-search"></i></button>
+                    placeholder="DOCUMENTO DE IDENTIDAD">
+                <button type="submit" class="btn btn-lg" style=" background-color: #123960; color:#ffffff" title="Buscar paciente"><i class="fa fa-search"></i></button>
             </div>
         </form>
         <div class="col-md-12">
@@ -25,7 +25,7 @@
                                             foreach($query_run as $items)
                                             {
                                                 echo '
-                                                <div class="card alert-info" style="width: 100%; border:0;">
+                                                <div class="card" style="width: 100%; border:0; background-color: #123960; COLOR:#ffffff">
                                                   <div class="row no-gutters">
                                                      <div class="col-md-4 text-left">
                                                         <img src="images/doc.png" alt="avatar" style="width:100%"> 
@@ -45,7 +45,7 @@
                                                          <td><a href="upd_paciente.php?nik=' . $items['numeroIdentificacion'] . '" title="Editar paciente" class="btn btn-outline-warning btn-lg"><span class="fa fa-edit" aria-hidden="true"></span></a></td>
                                                          <td><a href="main.php?aksi=delete&nik=' . $items['numeroIdentificacion'] . '" title="Eliminar paciente" onclick="return confirm(\'Esta seguro de borrar al paciente ' . $items['nombre'] . " " . $items['apellidos'] . '?\')" class="btn btn-outline-danger btn-lg"><span class="fa fa-trash" aria-hidden="true"></span></a></td>
                                                          </br>
-                                                         <p class="card-text"><small class="text-muted">Fecha de ingreso: '.$items['telefonoCelular'].'</small></p>
+                                                         <p class="card-text"><small class="text-muted">Fecha de ingreso: '.$items['dataTime'].'</small></p>
                                                        </div>
                                                     </div>
                                                  
@@ -77,7 +77,7 @@
         </div>
         </body>
     </div>
-    <div class="card-footer " style="background-image:url(images/footer.png); color:#fff">
+    <div class="card-footer " style=" background-color: #123960; color:#ffffff">
         <i class="fas fa-clock"></i>
         <?php
                                         $DateAndTime = date('m-d-Y h:i:s a', time());

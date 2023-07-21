@@ -120,7 +120,7 @@
     top: 0;
     height: 100%;
     width: 78px;
-    background-image:url(images/footer.png);
+   background-color: #123960;
     padding: 6px 14px;
     z-index: 99;
     transition: all 0.5s ease;
@@ -268,7 +268,7 @@
     align-items: center;
     text-decoration: none;
     transition: all 0.4s ease;
-    background:#FF3B3E;
+    background:#1d1b31;
 }
 
 .sidebar li a:hover {
@@ -310,7 +310,7 @@
     left: 0;
     bottom: -8px;
     padding: 10px 14px;
-    background-image:url(images/footer.png);
+    background-color: #123960;
     transition: all 0.5s ease;
     overflow: hidden;
 }

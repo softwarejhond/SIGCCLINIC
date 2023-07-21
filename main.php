@@ -12,6 +12,7 @@ $query = mysqli_query($con,"SELECT nombre FROM users WHERE username like '%$filt
 while ($userLog = mysqli_fetch_array($query)) {
  $pacient=$userLog['nombre'];
  }
+$materiasCanceladas = mysqli_query($con, "SELECT * FROM investigacion WHERE padrinoEducativo like '%$filtro%' AND estadoIES='ACTIVO CON MATERIAS CANCELADAS'");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,8 +37,10 @@ while ($userLog = mysqli_fetch_array($query)) {
         <div class="container-fluid rounded">
             <div class="row">
                 <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                      
+                    <div class="card">
+                        <?php //muy importante
+                         include "txtBanner.php";
+                        ?>
                         <div class="container">
                             <!--MENSAJES DE ELIMINAR EN CADA TABLA-->
                             <?php include './dashboard/alertEvolucionDelete.php';?>
@@ -46,10 +49,8 @@ while ($userLog = mysqli_fetch_array($query)) {
                         </div>
                         </br>
 
-                        <?php //muy importante
-                         include "contadores/contadores.php";?>
-                        </br>
-                        <div class="container">
+                    
+                        <div class="p-3 container">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item" role="presentation">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
@@ -81,16 +82,9 @@ while ($userLog = mysqli_fetch_array($query)) {
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-12 col-sm-12 px-2 mt-1">
-                <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php  include("txtBanner.php");
-                        ?>
-                    </div>
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include 'reloj.php';?>
-                    </div>
-                    <div class="card shadow p-2 mb-1 bg-white rounded">
-                        <?php include 'calendar.php';?>
-                    </div>
+                <?php //muy importante
+                         include "contadores/contadores.php";?>
+                        </br>
                 </div>
             </div>
             </br></br>

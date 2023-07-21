@@ -32,7 +32,7 @@ include("head.php");
         <?php include('nav.php');?>
         <div class="container-fluid rounded">
             <div class="row">
-                <div class="col-lg-9 col-md-12 col-sm-12 px-2 mt-1">
+                <div class="col-lg-12 col-md-12 col-sm-12 px-2 mt-1">
                     <div class="card">
 
                         <div class="col col-md-12 md">
@@ -112,18 +112,7 @@ include("head.php");
                 </div>
                 <br>
             </div>
-            <div class="col-lg-3 col-md-12 col-sm-12 px-2 mt-1">
-                <div class="card shadow p-2 mb-1 bg-white rounded">
-                    <?php  include("txtBanner.php");
-                        ?>
-                </div>
-                <div class="card shadow p-2 mb-1 bg-white rounded">
-                    <?php include('reloj.php');?>
-                </div>
-                <div class="card shadow p-2 mb-1 bg-white rounded">
-                    <?php include('calendar.php');?>
-                </div>
-            </div>
+
         </div>
         </div>
         </div>

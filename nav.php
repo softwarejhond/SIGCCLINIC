@@ -65,7 +65,7 @@ session_start();
 <style>
     .navegador {
     color: #fff;
-    background-image:url(images/footer.png);
+    background-color: #123960;
   
 }
 </style>
