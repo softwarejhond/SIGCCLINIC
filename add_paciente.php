@@ -27,15 +27,15 @@ require_once "conexion.php";
 <?php include('nav2.php'); ?>
 
 <body>
-    <section class="home-section">
+    <section class="home-section ">
         <?php include('nav.php'); ?>
         <div class="container-fluid rounded">
             <div class="row">
                 
                 <div class="col-lg-12 col-md-12 col-sm-12 px-2 mt-1">
                     
-                    <div class="card border-info shadow p-3 mb-5 bg-white rounded">
-                    <?php  include("txtBanner.php");?>
+                    <div class=" border-info shadow p-3 mb-5 bg-white rounded p-3 m-3">
+                   
                         <?php
                         if (isset($_POST['addPaciente'])) {
                             $tipoIdentificacion = mysqli_real_escape_string($con, (strip_tags($_POST["tipoIdentificacion"], ENT_QUOTES))); //Escanpando caracteres 
@@ -117,7 +117,7 @@ require_once "conexion.php";
                             }
                         }
                         ?>
-                        <div class="container">
+                        <div class="">
                       
                             <br>
                             <h2>Añadir nuevo paciente</h2>
@@ -283,11 +283,12 @@ require_once "conexion.php";
 
         </div>
         </div>
+     <br>
         <footer class="footer">
             <?php include('footer.php'); ?>
         </footer>
-
     </section>
+      
 </body>
 <style>
     .container-fluid {
